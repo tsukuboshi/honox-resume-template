@@ -22,7 +22,13 @@ export function parseMarkdownSimple(markdown: string): MarkdownSection[] {
 
       // 新しいセクションを作成
       const level = headingMatch[1].length;
-      const title = headingMatch[2];
+      let title = headingMatch[2];
+
+      // タイトル内のリンクマークダウンをHTMLに変換
+      title = title.replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
+      );
 
       currentSection = {
         title,
@@ -54,6 +60,22 @@ export function parseMarkdownSimple(markdown: string): MarkdownSection[] {
   return sections;
 }
 
+// 基本的なMarkdown記法をHTMLに変換する関数
+function convertBasicMarkdown(content: string): string {
+  return (
+    content
+      // 太字 **text** → <strong>text</strong>
+      .replace(/\*\*([^*]+)\*\*/g, '<strong class="font-bold">$1</strong>')
+      // イタリック *text* → <em>text</em>
+      .replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>')
+      // インラインコード `code` → <code>code</code>
+      .replace(
+        /`([^`]+)`/g,
+        '<code class="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm font-mono">$1</code>'
+      )
+  );
+}
+
 // テーブル記法を検出してHTMLテーブルに変換する関数
 function convertTableToHtml(content: string): string {
   const lines = content.trim().split("\n");
@@ -73,7 +95,14 @@ function convertTableToHtml(content: string): string {
     // 行の先頭が`- `で始まる場合（箇条書き）
     if (currentLine.startsWith("- ")) {
       const listContent = currentLine.substring(2); // "- "を削除
-      htmlContent += `<li class="ml-4 mb-2 flex items-start"><span class="mr-2 text-blue-500">•</span><span>${listContent}</span></li>`;
+      // リスト項目内のMarkdownリンクをHTMLリンクに変換
+      let processedListContent = listContent.replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
+      );
+      // 基本的なMarkdown記法も変換
+      processedListContent = convertBasicMarkdown(processedListContent);
+      htmlContent += `<li class="ml-4 mb-2 flex items-start"><span class="mr-2 text-blue-500">•</span><span>${processedListContent}</span></li>`;
       i++;
       continue;
     }
@@ -98,7 +127,14 @@ function convertTableToHtml(content: string): string {
 
         // ヘッダー行を追加
         headerRow.forEach((header) => {
-          htmlContent += `<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-200">${header}</th>`;
+          // ヘッダー内のMarkdownリンクをHTMLリンクに変換
+          let processedHeader = header.replace(
+            /\[([^\]]+)\]\(([^)]+)\)/g,
+            '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
+          );
+          // 基本的なMarkdown記法も変換
+          processedHeader = convertBasicMarkdown(processedHeader);
+          htmlContent += `<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-200">${processedHeader}</th>`;
         });
 
         htmlContent += '</tr></thead><tbody class="divide-y divide-gray-200">';
@@ -116,7 +152,14 @@ function convertTableToHtml(content: string): string {
           if (dataRow.length > 0) {
             htmlContent += '<tr class="hover:bg-gray-50">';
             dataRow.forEach((cell) => {
-              htmlContent += `<td class="px-4 py-3 text-sm text-gray-900 border-b border-gray-200">${cell}</td>`;
+              // セル内のMarkdownリンクをHTMLリンクに変換
+              let processedCell = cell.replace(
+                /\[([^\]]+)\]\(([^)]+)\)/g,
+                '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
+              );
+              // 基本的なMarkdown記法も変換
+              processedCell = convertBasicMarkdown(processedCell);
+              htmlContent += `<td class="px-4 py-3 text-sm text-gray-900 border-b border-gray-200">${processedCell}</td>`;
             });
             htmlContent += "</tr>";
           }
@@ -127,12 +170,22 @@ function convertTableToHtml(content: string): string {
         i--; // 次のループで正しく進むように調整
       } else {
         // 通常の行として処理
-        htmlContent += currentLine + "<br>";
+        let processedLine = currentLine.replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
+        );
+        processedLine = convertBasicMarkdown(processedLine);
+        htmlContent += processedLine + "<br>";
       }
     } else {
       // 通常の行として処理
       if (currentLine) {
-        htmlContent += currentLine + "<br>";
+        let processedLine = currentLine.replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
+        );
+        processedLine = convertBasicMarkdown(processedLine);
+        htmlContent += processedLine + "<br>";
       } else {
         htmlContent += "<br>";
       }
@@ -144,47 +197,58 @@ function convertTableToHtml(content: string): string {
   return htmlContent;
 }
 
+// スライド共有サービスのリンクをiframe埋め込みに変換する関数
+function convertSlideToEmbed(content: string): string {
+  // スライド共有サービスのリンクパターンを検出:
+  // "- [タイトル](https://speakerdeck.com/player/SLIDE_ID)"
+  // "- [タイトル](https://www.docswell.com/slide/SLIDE_ID/embed#?)"
+  const slidePattern =
+    /- \[([^\]]+)\]\((https:\/\/(?:speakerdeck\.com\/player\/|www\.docswell\.com\/slide\/[^/]+\/embed?)[^)]+)\)/g;
+
+  return content.replace(slidePattern, (match, title, url) => {
+    let cleanTitle = title;
+    let className = "";
+
+    // SpeakerDeckかDocswellかを判定してタイトルクリーンアップとクラス名を決定
+    if (url.includes("speakerdeck.com")) {
+      cleanTitle = title.replace(/\s*\\?\s*-\s*Speaker\s*Deck\s*$/i, "");
+      className = "speakerdeck-iframe";
+    } else if (url.includes("docswell.com")) {
+      cleanTitle = title.replace(/\s*\|\s*ドクセル\s*$/i, "");
+      className = "docswell-iframe";
+    }
+
+    return `<iframe class="${className}" frameborder="0" src="${url}" title="${cleanTitle}" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>`;
+  });
+}
+
+// ブログ記事リンクをはてなブログカードに変換する関数
+function convertBlogURLToHatenaCard(content: string): string {
+  // ブログ記事のリンクパターンを検出:
+  // "- [タイトル](https://dev.classmethod.jp/articles/...)"
+  // "- [タイトル](https://qiita.com/...)" (投稿以外のページを除外)
+  // "- [タイトル](https://zenn.dev/.../articles/...)" (記事のみ)
+  const blogPattern =
+    /- \[([^\]]+)\]\((https:\/\/(?:dev\.classmethod\.jp\/articles\/[^)]+|qiita\.com\/[^\/]+\/items\/[^)]+|zenn\.dev\/[^\/]+\/articles\/[^)]+))\)/g;
+
+  return content.replace(blogPattern, (match, title, url) => {
+    return `<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:680px;" title="${title}" src="https://hatenablog-parts.com/embed?url=${encodeURIComponent(
+      url
+    )}" width="300" height="150" frameborder="0" scrolling="no"></iframe>`;
+  });
+}
+
 export function renderMarkdownContent(content: string): string {
   if (!content.trim()) return "";
 
-  // まずテーブルを変換（水平線と箇条書きも含む）
-  let processedContent = convertTableToHtml(content);
+  // スライド共有サービスをiframe埋め込みに変換
+  let processedContent = convertSlideToEmbed(content);
 
-  // 残った水平線パターンを変換
-  processedContent = processedContent.replace(
-    /---<br>/g,
-    '<hr class="my-6 border-t border-gray-200">'
-  );
+  // ブログ記事をはてなブログカードに変換
+  processedContent = convertBlogURLToHatenaCard(processedContent);
 
-  // リンクを変換
-  processedContent = processedContent.replace(
-    /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>'
-  );
+  // 基本的なMarkdown記法を変換
+  processedContent = convertBasicMarkdown(processedContent);
 
-  // 太字を変換
-  processedContent = processedContent.replace(
-    /\*\*([^*]+)\*\*/g,
-    '<strong class="font-semibold">$1</strong>'
-  );
-
-  // 斜体を変換
-  processedContent = processedContent.replace(
-    /\*([^*]+)\*/g,
-    '<em class="italic">$1</em>'
-  );
-
-  // インラインコードを変換
-  processedContent = processedContent.replace(
-    /`([^`]+)`/g,
-    '<code class="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">$1</code>'
-  );
-
-  // 連続するリスト項目をul要素でラップ
-  processedContent = processedContent.replace(
-    /(<li class="ml-4 mb-2 flex items-start">[\s\S]*?<\/li>)(\s*<li class="ml-4 mb-2 flex items-start">[\s\S]*?<\/li>)*/g,
-    '<ul class="list-none space-y-1 mb-4">$&</ul>'
-  );
-
-  return processedContent;
+  return convertTableToHtml(processedContent);
 }

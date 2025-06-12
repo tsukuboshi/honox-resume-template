@@ -22,7 +22,10 @@ export default function ToggleSection({ title, content, level, defaultOpen = fal
   if (level !== 4) {
     return (
       <div className="mb-6">
-        <h2 className={headingClass + ' mb-4'}>{title}</h2>
+        <h2
+          className={headingClass + ' mb-4'}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
         <div
           className="prose max-w-none"
           dangerouslySetInnerHTML={{ __html: renderMarkdownContent(content) }}
@@ -40,7 +43,10 @@ export default function ToggleSection({ title, content, level, defaultOpen = fal
         <span className={`transform transition-transform text-gray-500 ${isOpen ? 'rotate-90' : ''}`}>
           ▶
         </span>
-        <span className={headingClass}>{title}</span>
+        <span
+          className={headingClass}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
       </button>
       {isOpen && (
         <div className="px-4 pb-4 border-t border-gray-100">
