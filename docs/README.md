@@ -513,117 +513,105 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 以下では開発した自作リポジトリの内、主要なものを記載する。
 
-**[dotfiles: Mac用の設定ファイル](https://github.com/tsukuboshi/dotfiles)**
-
-- 自身の PC セットアップ用の dotfiles を格納したリポジトリ
-
-**[sam-notify-aws-billing: AWS請求額通知システム用SAMアプリ](https://github.com/tsukuboshi/sam-notify-aws-billing)**
-
-- Email/Slack/LINE に AWS 利用料金を通知するサーバレスシステムコードを格納したリポジトリ
-
-**[sam-ai-cloud-engineer: AWS構成図をCFnテンプレート&パラメータシートに変換するSAMアプリ](https://github.com/tsukuboshi/sam-ai-cloud-engineer)**
-
-- Amazon Bedrock を活用し構成図を CloudFormation テンプレートとパラメータシートに変換するサーバレスシステムコードを格納したリポジトリ
-
-**[gas-count-schedule-time: スケジュール工数集計用GASアプリ](https://github.com/tsukuboshi/gas-count-schedule-time)**
-
-- GAS を活用し Google カレンダーの予定から色ごとに工数をカウントし集計するアプリコードを格納したリポジトリ
-
-**[sam-bedrock-kendra-rag: RAG構成用SAMテンプレート](https://github.com/tsukuboshi/sam-bedrock-kendra-rag)**
-
-- Amazon Kendra と Amazon Bedrock を用いた RAG システムデプロイするためのコードを格納したリポジトリ
-
-**[sam-bedrock-kb-aurora-rag: RAGをKnowledge Bases(with Aurora)で作成するSAMテンプレート](https://github.com/tsukuboshi/sam-bedrock-kb-aurora-rag)**
-
-- Amazon Aurora と Amazon Bedrock Knowledge Bases を用いた RAG システムデプロイするためのコードを格納したリポジトリ
-
-**[terraform-microservices-template: マイクロサービス構成用Terraformテンプレート](https://github.com/tsukuboshi/terraform-microservices-template)**
-
-- AWS を用いたマイクロサービス構成用 Terraform テンプレートを格納したリポジトリ
-
-**[cdk-microservices-bluegreendeployment-template: マイクロサービス(ブルーグリーンデプロイメント)構成用CDKテンプレート](https://github.com/tsukuboshi/cdk-microservices-bluegreendeployment-template)**
-
-- AWS を用いた マイクロサービス構成用 CDK テンプレートを格納したリポジトリ
+|リポジトリ名|言語|概要|
+|---|---|---|
+|[dotfiles](https://github.com/tsukuboshi/dotfiles)|Bash|自身の PC セットアップ用の dotfiles|
+|[sam-notify-aws-billing](https://github.com/tsukuboshi/sam-notify-aws-billing)|SAM/Python|AWS 利用料金を通知するサーバレスシステムコード|
+|[sam-ai-cloud-engineer](https://github.com/tsukuboshi/sam-ai-cloud-engineer)|SAM/Python|Amazon Bedrock を活用し構成図を CloudFormation テンプレートとパラメータシートに変換するサーバレスシステムコード|
+|[gas-count-schedule-time](https://github.com/tsukuboshi/gas-count-schedule-time)|Aside/TypeScript|Googleカレンダーの予定から色ごとに工数をカウントし集計するアプリコード|
+|[sam-bedrock-kendra-rag](https://github.com/tsukuboshi/sam-bedrock-kendra-rag)|SAM/Python|Amazon Kendra と Amazon Bedrock を用いた RAG システムデプロイするためのコード|
+|[sam-bedrock-kb-aurora-rag](https://github.com/tsukuboshi/sam-bedrock-kb-aurora-rag)|SAM/Python|Amazon Aurora と Amazon Bedrock Knowledge Bases を用いた RAG システムデプロイするためのコード|
+|[terraform-microservices-template](https://github.com/tsukuboshi/terraform-microservices-template)|Terraform|AWS を用いたマイクロサービス構成用 Terraform テンプレート|
+|[cdk-microservices-bluegreendeployment-template](https://github.com/tsukuboshi/cdk-microservices-bluegreendeployment-template)|CDK/TypeScript|AWS を用いた マイクロサービス構成用 CDK テンプレート|
 
 ### ブログ投稿
 
-**[DevelopersIO](https://dev.classmethod.jp/author/tsukuboshi/)**
+#### [DevelopersIO](https://dev.classmethod.jp/author/tsukuboshi/)
 
-- 主に技術記事を投稿
-- 2024/11 時点で 90 本以上の記事を作成
+2025/6までに 100 本以上の記事を作成していました。主要記事は以下の通りです。
 
-**[Zenn](https://zenn.dev/tsukuboshi)**
+- [CloudFormation一撃で作るAWS料金通知ツール(Email/Slack/LINE対応)](https://dev.classmethod.jp/articles/notify-aws-billing-for-cloudformaiton/)
 
-- 主に自学内容をスクラップで投稿
+#### [Qiita](https://qiita.com/kuraboshi)
 
-### 執筆活動
+- [【備忘録】Kubernetesの仕組みを整理する \#kubernetes \- Qiita](https://qiita.com/kuraboshi/items/036ba1b5cf67cb8a6dcd)
 
-以下では執筆した書籍の内、主要なものを記載する。
+#### [Zenn](https://zenn.dev/tsukuboshi)
 
-**[Software Design 2024年11月号｜技術評論社](https://gihyo.jp/magazine/SD/archive/2024/202411)**
+2025/7現在投稿しているブログサイトになります。主要記事は以下の通りです。
 
-- 「第1特集 新世代の開発スタイル はじめてのAI駆動開発」における「第4章：Infrastructure as Codeで生成AIを活用するアーキテクチャ図⇔IaCコードの変換も自由自在」を担当
-
-### イベント運営
-
-**[JAWS-UG 茨城 - connpass](https://jawsug-ibaraki.connpass.com/)**
-
-- JAWS-UG 茨城 の初期メンバーとして立ち上げを実施し、運営メンバーとして活動中
+- [Macの環境をdotfilesでセットアップしてみた改](https://zenn.dev/tsukuboshi/articles/6e82aef942d9af)
 
 ### イベント登壇
 
 以下では登壇したイベントの内、主要なものを記載する。
 
-**[JAWS FESTA 2024 in 広島](https://jawsfesta2024.jaws-ug.jp/) (2024/10/12)**
+#### サンプルイベント
 
-- 資料：[Amplify Gen 2ではじめる 生成AIアプリ開発入門 - Speaker Deck](https://speakerdeck.com/tsukuboshi/amplify-gen-2dehazimeru-sheng-cheng-aiapurikai-fa-ru-men)
+- [Copilotでクレームメールも怖くない \| ドクセル](https://www.docswell.com/slide/K7RXN1/embed)
 
-**[Classmethod Odyssey ONLINE 生成AI編](https://classmethod.connpass.com/event/322685/) (2024/7/8)**
+#### [JAWS FESTA 2024 in 広島](https://jawsfesta2024.jaws-ug.jp/)：Amplify Gen 2ではじめる 生成AIアプリ開発入門
 
-- 資料：[AWSで構築するパターン別RAG構成解説 - Speaker Deck](https://speakerdeck.com/tsukuboshi/awsdegou-zhu-surupatanbie-raggou-cheng-jie-shuo)
+- [Amplify Gen 2ではじめる 生成AIアプリ開発入門 - Speaker Deck](https://speakerdeck.com/player/98e6569af2b24e4ebff41b46dc4d253a)
 
-**[Bedrock Claude Night 2](https://jawsug-ai.connpass.com/event/319748/) (2024/6/18)**
+#### [Classmethod Odyssey](https://classmethod.connpass.com/event/322685/)：AWSで構築するパターン別RAG構成解説
 
-- 資料：[AWS構成図からCloudFormationとパラメータシートを自動生成するシステムを作ってみた](https://speakerdeck.com/tsukuboshi/awsgou-cheng-tu-kara-cloudformationtoparametasitowo-zi-dong-sheng-cheng-surusisutemuwozuo-tutemita)
+- [AWSで構築するパターン別RAG構成解説 - Speaker Deck](https://speakerdeck.com/player/2707682b444841d19d18771759abc78e)
 
-**[JAWS-UG東京 ランチタイムLT会 #11](https://jawsug.connpass.com/event/316451/) (2024/5/15)**
+#### [Bedrock Claude Night 2](https://jawsug-ai.connpass.com/event/319748/)：AWS構成図からCloudFormationとパラメータシートを自動生成するシステムを作ってみた
 
-- 資料：[5分で分かる(かもしれない)Vector engine for OpenSearch Serverless](https://speakerdeck.com/tsukuboshi/5fen-defen-karu-kamosirenai-vector-engine-for-opensearch-serverless)
+- [AWS構成図からCloudFormationとパラメータシートを自動生成するシステムを作ってみた](https://speakerdeck.com/player/1464a901f9fb4e2e89fda1fa85ab6471)
 
-**[JAWS-UG朝会 #55](https://jawsug-asa.connpass.com/event/301827/) (2024/3/15)**
+#### [JAWS-UG東京 ランチタイムLT会 #11](https://jawsug.connpass.com/event/316451/)：5分で分かる(かもしれない)Vector engine for OpenSearch Serverless
 
-- 資料：[君はApplication Composerというサービスを知っているか](https://speakerdeck.com/tsukuboshi/jun-haapplication-composertoiusabisuwozhi-tuteiruka)
+- [5分で分かる(かもしれない)Vector engine for OpenSearch Serverless](https://speakerdeck.com/player/aaa0830e33354ea6a63b8322be7e08bf)
 
-**[JAWS-UG CDK支部 #12](https://jawsug-cdk.connpass.com/event/307989/) (2024/2/21)**
+#### [JAWS-UG朝会 #55](https://jawsug-asa.connpass.com/event/301827/)：君はApplication Composerというサービスを知っているか
 
-- 資料：[CDKをCloudFormationテンプレートとして利用する際の注意点n選](https://speakerdeck.com/tsukuboshi/cdkwocloudformationtenpuretotosite-li-yong-suruji-nozhu-yi-dian-nxuan)
+- [君はApplication Composerというサービスを知っているか](https://speakerdeck.com/player/209b17ab0ec7448da834f4df887d0652)
 
-**[JAWS-UG朝会 #51](https://jawsug-asa.connpass.com/event/291917/) (2023/11/6)**
+#### [JAWS-UG CDK支部 #12](https://jawsug-cdk.connpass.com/event/307989/)：CDKをCloudFormationテンプレートとして利用する際の注意点n選
 
-- 資料：[インフラエンジニアのためのLambda実践入門](https://speakerdeck.com/tsukuboshi/inhuraensinianotamenolambdashi-jian-ru-men)
+- [CDKをCloudFormationテンプレートとして利用する際の注意点n選](https://speakerdeck.com/player/eb548fa38dd745969c32ccc138cced66)
 
-**[DevelopersIO 2023 〜GETだけじゃもったいない、PUTしてPOSTする2日間〜](https://event.classmethod.jp/developers-io/2023) (2023/7/17)**
+#### [JAWS-UG朝会 #51](https://jawsug-asa.connpass.com/event/291917/)：インフラエンジニアのためのLambda実践入門
 
-- 資料：[AWSとGitHubを用いたパターン別CI/CD構成解説](https://speakerdeck.com/tsukuboshi/cdgou-cheng-jie-shuo)
+- [インフラエンジニアのためのLambda実践入門](https://speakerdeck.com/player/f541cbd494e941558827ec87039ebfe4)
 
-**[JAWS-UG朝会 #39](https://jawsug-asa.connpass.com/event/255874/) (2022/11/9)**
+#### [DevelopersIO 2023](https://event.classmethod.jp/developers-io/2023)：AWSとGitHubを用いたパターン別CI/CD構成解説
 
-- 資料：[(今更ながら)AWSのコンテナサービスについてざっくりまとめてみる](https://speakerdeck.com/tsukuboshi/jin-geng-nakara-awsnokontenasahisunituitesatukurimatometemiru)
+- [AWSとGitHubを用いたパターン別CI/CD構成解説](https://speakerdeck.com/player/13ed26fb607a41d598f64b0b899dd0da)
 
-**[JAWS-UG CLI専門支部 #273R (入門者向け) AWS CLI基礎(出力)](https://jawsug-cli.connpass.com/event/253108/) (2022/8/29)**
+#### [JAWS-UG朝会 #39](https://jawsug-asa.connpass.com/event/255874/)：(今更ながら)AWSのコンテナサービスについてざっくりまとめてみる
 
-- 資料：[LambdaとLine Messaging APIで湯 婆 婆 botを作ってみた](https://speakerdeck.com/tsukuboshi/lambdatoline-messaging-apidetang-po-po-botwozuo-tutemita)
+- [(今更ながら)AWSのコンテナサービスについてざっくりまとめてみる](https://speakerdeck.com/player/bac50c7f2ab44ab5a94c80f82883334b)
 
-**[DevelopersIO 2022](https://dev.classmethod.jp/news/devio-2022/) (2022/7/25)**
+#### [JAWS-UG CLI専門支部 #273R](https://jawsug-cli.connpass.com/event/253108/)：LambdaとLine Messaging APIで湯婆婆botを作ってみた
 
-- 資料：[AWS初心者に捧ぐコスト可視化のススメ](https://speakerdeck.com/tsukuboshi/awschu-xin-zhe-nipeng-gukosutoke-shi-hua-falsesusume)
+- [LambdaとLine Messaging APIで湯婆婆botを作ってみた](https://speakerdeck.com/player/9c9d25fecd894b9b845063e50662b5ea)
 
-**[AKIBA.AWS ONLINE #08](https://dev.classmethod.jp/news/akiba-aws-220523/) (2022/5/23)**
+#### [DevelopersIO 2022](https://dev.classmethod.jp/news/devio-2022/)：AWS初心者に捧ぐコスト可視化のススメ
 
-- 資料：[それ、t2.micro選んで大丈夫？](https://speakerdeck.com/tsukuboshi/akiba-dot-aws-sore-t2-dot-microxuan-ndeda-zhang-fu)
+- [AWS初心者に捧ぐコスト可視化のススメ](https://speakerdeck.com/player/6864a287e4074215b7f179716df7a0b4)
 
-**[JAWS-UG CLI専門支部 #256M (入門者向け) SQS入門](https://jawsug-cli.connpass.com/event/243629/) (2022/4/29)**
+#### [AKIBA.AWS ONLINE #08](https://dev.classmethod.jp/news/akiba-aws-220523/)：それ、t2.micro選んで大丈夫？
 
-- 資料：[CLI専門支部に参加したらAWSエンジニアに転職できた件について](https://speakerdeck.com/tsukuboshi/clizhuan-men-zhi-bu-nican-jia-sitara-awsenzinianinaretajian-nituite)
+- [それ、t2.micro選んで大丈夫？](https://speakerdeck.com/player/d12345c2b1f94f7fb6626de0d7b81211)
 
----
+#### [JAWS-UG CLI専門支部 #256M](https://jawsug-cli.connpass.com/event/243629/)：CLI専門支部に参加したらAWSエンジニアに転職できた件について
+
+- [CLI専門支部に参加したらAWSエンジニアに転職できた件について](https://speakerdeck.com/player/19623bacacf44d4d8567255085941c1b)
+
+### その他
+
+#### 執筆経験
+
+「第1特集 新世代の開発スタイル はじめてのAI駆動開発」における「第4章：Infrastructure as Codeで生成AIを活用するアーキテクチャ図⇔IaCコードの変換も自由自在」を担当
+
+- [Software Design 2024年11月号｜技術評論社](https://gihyo.jp/magazine/SD/archive/2024/202411)
+
+#### イベント運営
+
+JAWS-UG 茨城 の初期メンバーとして立ち上げに貢献し、運営メンバーとして活動中
+
+- [JAWS-UG 茨城 - connpass](https://jawsug-ibaraki.connpass.com/)
