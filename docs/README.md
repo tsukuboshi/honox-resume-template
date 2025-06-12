@@ -11,14 +11,12 @@
 ### アカウント
 
 - [DevelopersIO](https://dev.classmethod.jp/author/tsukuboshi)
-- [Github](https://github.com/tsukuboshi)
 - [Zenn](https://zenn.dev/tsukuboshi)
-- [SpeakerDeck](https://speakerdeck.com/tsukuboshi)
-- [X](https://x.com/tsukuboshi0755)
 - [Qiita](https://qiita.com/kuraboshi)
+- [Github](https://github.com/tsukuboshi)
+- [SpeakerDeck](https://speakerdeck.com/tsukuboshi)
 - [Docswell](https://www.docswell.com/user/tsukuboshi)
-
----
+- [X](https://x.com/tsukuboshi0755)
 
 ## 業務スキル
 
@@ -46,8 +44,6 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 小規模チームで（3 - 5 人程度）でリーダーを務めたことが多数あります。  
 プロジェクトを成功に導くため、メンバーのモチベーション管理や業務効率化にも力を入れています。
 
----
-
 ## 技術スキル
 
 実業務で使用した技術のみ列挙。
@@ -72,8 +68,6 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 
 `GitHub` `GitHub Actions`
 
----
-
 ## 保有称号
 
 ### 表彰
@@ -96,8 +90,6 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 |LPIC-2|2021/6/28|
 |ORACLE MASTER Silver Oracle Database 12c|2021/3/29|
 |基本情報 技術者試験|2019/11/20|
-
----
 
 ## 経歴
 
@@ -156,8 +148,6 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 - AWS サービス：`WAF` `App Runner` `DynamoDB` `Secrets Manager` `Lambda(Node.js)` `Bedrock` `Kendra` `S3`
 - IaC： `CDK(Typescript)`
-
--
 
 #### 社内生成AIインフラチーム活動（2024/1 - 2024/8)
 
@@ -224,8 +214,6 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 - AWS サービス：`Security Hub` `GuardDuty` `Step Functions` `EventBridge`
 - IaC： `CDK(Typescript)`
-
--
 
 #### SaaSログ連携・保管サーバレスシステム設計構築（2023/5 - 2024/6)
 
@@ -503,8 +491,6 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 - ミドルウェア： `Docker` `Kubernetes` `Openshift`
 
----
-
 ## 業務外活動
 
 ### 個人開発
@@ -606,14 +592,10 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 ### その他
 
-#### 執筆経験
+#### [Software Design 2024年11月号](https://gihyo.jp/magazine/SD/archive/2024/202411)寄稿
 
 「第1特集 新世代の開発スタイル はじめてのAI駆動開発」における「第4章：Infrastructure as Codeで生成AIを活用するアーキテクチャ図⇔IaCコードの変換も自由自在」を担当
 
-- [Software Design 2024年11月号｜技術評論社](https://gihyo.jp/magazine/SD/archive/2024/202411)
+#### [JAWS-UG 茨城](https://jawsug-ibaraki.connpass.com/)運営
 
-#### イベント運営
-
-JAWS-UG 茨城 の初期メンバーとして立ち上げに貢献し、運営メンバーとして活動中
-
-- [JAWS-UG 茨城 - connpass](https://jawsug-ibaraki.connpass.com/)
+JAWS-UG茨城の初期メンバーとして2024年7月からの立ち上げに貢献し、運営メンバーとして活動中
