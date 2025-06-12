@@ -14,7 +14,9 @@
 - [Github](https://github.com/tsukuboshi)
 - [Zenn](https://zenn.dev/tsukuboshi)
 - [SpeakerDeck](https://speakerdeck.com/tsukuboshi)
-- [Twitter](https://twitter.com/tsukuboshi0755)
+- [X](https://x.com/tsukuboshi0755)
+- [Qiita](https://qiita.com/kuraboshi)
+- [Docswell](https://www.docswell.com/user/tsukuboshi)
 
 ---
 
