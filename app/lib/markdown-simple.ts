@@ -5,6 +5,14 @@ export interface MarkdownSection {
   id: string;
 }
 
+// コンポーネント間で共有するセクションアイテムの型定義
+export interface SectionItem {
+  id: string;
+  title: string;
+  content: string;
+  level: number;
+}
+
 export function parseMarkdownSimple(markdown: string): MarkdownSection[] {
   const lines = markdown.split("\n");
   const sections: MarkdownSection[] = [];
@@ -68,10 +76,10 @@ function convertBasicMarkdown(content: string): string {
       .replace(/\*\*([^*]+)\*\*/g, '<strong class="font-bold">$1</strong>')
       // イタリック *text* → <em>text</em>
       .replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>')
-      // インラインコード `code` → <code>code</code>
+      // インラインコード `code` → <code>code</code> (技術バッジスタイル)
       .replace(
         /`([^`]+)`/g,
-        '<code class="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm font-mono">$1</code>'
+        '<code class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200 shadow-sm hover:bg-blue-200 transition-colors duration-200">$1</code>'
       )
   );
 }

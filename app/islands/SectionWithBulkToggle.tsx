@@ -1,12 +1,5 @@
 import { useState, useRef, useEffect } from 'hono/jsx';
-import { renderMarkdownContent } from '../lib/markdown-simple';
-
-interface SectionItem {
-  id: string;
-  title: string;
-  content: string;
-  level: number;
-}
+import { renderMarkdownContent, SectionItem } from '../lib/markdown-simple';
 
 interface SectionWithBulkToggleProps {
   section: SectionItem;
