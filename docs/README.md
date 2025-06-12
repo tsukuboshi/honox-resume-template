@@ -544,9 +544,13 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 以下では登壇したイベントの内、主要なものを記載する。
 
-#### サンプルイベント
+#### [Amazon Bedrock GenUハンズオン #1](https://classmethod.connpass.com/event/346442/)
 
-- [Copilotでクレームメールも怖くない \| ドクセル](https://www.docswell.com/slide/K7RXN1/embed)
+- [Amazon Bedrock GenUハンズオン座学資料 #1 GenU環境で生成AIを体験してみよう](https://www.docswell.com/slide/ZXE8GN/embed)
+
+#### [Amazon Bedrock GenUハンズオン #2](https://classmethod.connpass.com/event/346443/)
+
+- [Amazon Bedrock GenUハンズオン座学資料 #2 GenU環境でRAGを体験してみよう](https://www.docswell.com/slide/5DNR34/embed)
 
 #### [JAWS FESTA 2024 in 広島](https://jawsfesta2024.jaws-ug.jp/)：Amplify Gen 2ではじめる 生成AIアプリ開発入門
 
