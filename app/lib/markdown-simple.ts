@@ -209,7 +209,7 @@ function convertTableToHtml(content: string): string {
 function convertSlideToEmbed(content: string): string {
   // スライド共有サービスのリンクパターンを検出:
   // "- [タイトル](https://speakerdeck.com/player/SLIDE_ID)"
-  // "- [タイトル](https://www.docswell.com/slide/SLIDE_ID/embed#?)"
+  // "- [タイトル](https://www.docswell.com/slide/SLIDE_ID/embed?)"
   const slidePattern =
     /- \[([^\]]+)\]\((https:\/\/(?:speakerdeck\.com\/player\/|www\.docswell\.com\/slide\/[^/]+\/embed?)[^)]+)\)/g;
 
@@ -246,13 +246,80 @@ function convertBlogURLToHatenaCard(content: string): string {
   });
 }
 
-// アカウントリンクをshields.ioバッジに変換する関数（セクション指定版）
+// URLがアカウントプロフィールページかどうかを判定する関数
+function isAccountProfileUrl(url: string): boolean {
+  // 明らかにプロフィールページでないパターンを除外
+  const excludePatterns = [
+    // GitHub: リポジトリ、issues、PR、releases等
+    /github\.com\/[^\/]+\/[^\/]+/,
+    // Qiita: 投稿記事、タグ等
+    /qiita\.com\/[^\/]+\/items/,
+    /qiita\.com\/tags/,
+    // Zenn: 記事、本、topics等
+    /zenn\.dev\/[^\/]+\/articles/,
+    /zenn\.dev\/[^\/]+\/books/,
+    /zenn\.dev\/topics/,
+    // DevelopersIO: 記事ページ等
+    /dev\.classmethod\.jp\/articles/,
+    // SpeakerDeck: プレゼンテーション等
+    /speakerdeck\.com\/[^\/]+\/[^\/]+/,
+    // X: 投稿、検索等
+    /x\.com\/[^\/]+\/status/,
+    /x\.com\/search/,
+    // Docswell: スライド等
+    /docswell\.com\/slide/,
+  ];
+
+  // 除外パターンにマッチする場合はプロフィールページではない
+  if (excludePatterns.some((pattern) => pattern.test(url))) {
+    return false;
+  }
+
+  // 各サービスのプロフィールページのパターンをチェック
+  // ユーザー名部分は任意の文字列（英数字、アンダースコア、ハイフン）に対応
+  // URLの末尾に/がないプロフィールページを判定
+  const profilePatterns = [
+    // DevelopersIO: /author/ユーザー名（パスが/author/で終わる）
+    /https?:\/\/dev\.classmethod\.jp\/author\/[a-zA-Z0-9_-]+$/,
+    // GitHub: /ユーザー名（ルートレベルのユーザー名）
+    /https?:\/\/github\.com\/[a-zA-Z0-9_-]+$/,
+    // Zenn: /ユーザー名（ルートレベルのユーザー名）
+    /https?:\/\/zenn\.dev\/[a-zA-Z0-9_-]+$/,
+    // SpeakerDeck: /ユーザー名（ルートレベルのユーザー名）
+    /https?:\/\/speakerdeck\.com\/[a-zA-Z0-9_-]+$/,
+    // X: /ユーザー名（ルートレベルのユーザー名）
+    /https?:\/\/x\.com\/[a-zA-Z0-9_-]+$/,
+    // Qiita: /ユーザー名（ルートレベルのユーザー名）
+    /https?:\/\/qiita\.com\/[a-zA-Z0-9_-]+$/,
+    // Docswell: /user/ユーザー名（パスが/user/で終わる）
+    /https?:\/\/www\.docswell\.com\/user\/[a-zA-Z0-9_-]+$/,
+  ];
+
+  return profilePatterns.some((pattern) => pattern.test(url));
+}
+
+// コンテンツ内にアカウントプロフィールURLが含まれているかチェックする関数
+function hasAccountProfileUrls(content: string): boolean {
+  const urlPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let match;
+
+  while ((match = urlPattern.exec(content)) !== null) {
+    const url = match[2];
+    if (isAccountProfileUrl(url)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+// アカウントリンクをshields.ioバッジに変換する関数（URLパターン判定版）
 function convertAccountLinksToShieldsBadges(
   content: string,
-  isAccountSection: boolean = false
+  sectionTitle?: string
 ): string {
-  // アカウントセクション以外では変換しない
-  if (!isAccountSection) {
+  // コンテンツ内にアカウントプロフィールURLがない場合は変換しない
+  if (!hasAccountProfileUrls(content)) {
     return content;
   }
 
@@ -304,7 +371,7 @@ function convertAccountLinksToShieldsBadges(
 
   let processedContent = content;
 
-  // 各サービスのリンクを変換
+  // 各サービスのリンクを変換（アカウントプロフィールURLのみ）
   Object.entries(serviceConfig).forEach(([domain, config]) => {
     const linkPattern = new RegExp(
       `\\[([^\\]]+)\\]\\(https?://${domain.replace(/\./g, "\\.")}[^\\)]*\\)`,
@@ -318,6 +385,12 @@ function convertAccountLinksToShieldsBadges(
         if (!urlMatch) return match;
 
         const originalUrl = urlMatch[2];
+
+        // アカウントプロフィールURLでない場合は変換しない
+        if (!isAccountProfileUrl(originalUrl)) {
+          return match;
+        }
+
         const usernameMatch = match.match(config.usernameRegex);
         const username = usernameMatch ? usernameMatch[1] : "";
 
@@ -353,20 +426,16 @@ export function renderMarkdownContent(
 ): string {
   if (!content.trim()) return "";
 
-  // セクションタイトルからアカウントセクションかどうかを判定
-  const isAccountSection =
-    (sectionTitle && sectionTitle.includes("アカウント")) || false;
-
   // スライド共有サービスをiframe埋め込みに変換
   let processedContent = convertSlideToEmbed(content);
 
   // ブログ記事をはてなブログカードに変換
   processedContent = convertBlogURLToHatenaCard(processedContent);
 
-  // アカウントリンクをshields.ioバッジに変換
+  // アカウントリンクをshields.ioバッジに変換（URLパターン判定）
   processedContent = convertAccountLinksToShieldsBadges(
     processedContent,
-    isAccountSection
+    sectionTitle
   );
 
   // 基本的なMarkdown記法を変換
