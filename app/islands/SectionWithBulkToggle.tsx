@@ -73,7 +73,7 @@ export default function SectionWithBulkToggle({ section, subsections }: SectionW
       {section.content.trim() && (
         <div
           className="prose max-w-none mb-6"
-          dangerouslySetInnerHTML={{ __html: renderMarkdownContent(section.content) }}
+          dangerouslySetInnerHTML={{ __html: renderMarkdownContent(section.content, section.title) }}
         />
       )}
 
@@ -99,7 +99,7 @@ export default function SectionWithBulkToggle({ section, subsections }: SectionW
               <div className="px-4 pb-4 border-t border-gray-100">
                 <div
                   className="prose max-w-none pt-3"
-                  dangerouslySetInnerHTML={{ __html: renderMarkdownContent(subsection.content) }}
+                  dangerouslySetInnerHTML={{ __html: renderMarkdownContent(subsection.content, subsection.title) }}
                 />
               </div>
             )}

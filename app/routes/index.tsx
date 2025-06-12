@@ -62,7 +62,6 @@ export default function Home() {
       <div className="max-w-4xl mx-auto py-8 px-4">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">職務経歴書</h1>
-          <p className="text-gray-600">つくぼし - ソリューションアーキテクト</p>
         </header>
 
         <main className="bg-white rounded-lg shadow-lg p-8">

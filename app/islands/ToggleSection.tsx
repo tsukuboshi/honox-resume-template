@@ -28,7 +28,7 @@ export default function ToggleSection({ title, content, level, defaultOpen = fal
         />
         <div
           className="prose max-w-none"
-          dangerouslySetInnerHTML={{ __html: renderMarkdownContent(content) }}
+          dangerouslySetInnerHTML={{ __html: renderMarkdownContent(content, title) }}
         />
       </div>
     );
@@ -52,7 +52,7 @@ export default function ToggleSection({ title, content, level, defaultOpen = fal
         <div className="px-4 pb-4 border-t border-gray-100">
           <div
             className="prose max-w-none pt-3"
-            dangerouslySetInnerHTML={{ __html: renderMarkdownContent(content) }}
+            dangerouslySetInnerHTML={{ __html: renderMarkdownContent(content, title) }}
           />
         </div>
       )}
