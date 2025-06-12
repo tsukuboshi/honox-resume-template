@@ -52,23 +52,23 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 
 ### AWS
 
-IAM / VPC / ELB(ALB・NLB) / EC2 / EFS / RDS(MySQL・Aurora) / ElastiCache(Redis) / S3 / CloudFront / Route 53 / ACM / WAF / ECS(Fargate) / App Runner / ECR / API Gateway / Lambda(Node.js・Python) / DynamoDB / Step Functions / CodeCommit / CodeBuild / CodeDeploy / CodePipeline / SQS / SNS / Data Firehose / EventBridge / CloudWatch (Alarm・Logs) / Security Hub / GuardDuty / Control Tower / Organizations / Identity Center / Service Catalog / DevOps Guru / Bedrock / Kendra
+`IAM` `VPC` `ELB(ALB・NLB)` `EC2` `EFS` `RDS(MySQL・Aurora)` `ElastiCache(Redis)` `S3` `CloudFront` `Route 53` `ACM` `WAF` `ECS(Fargate)` `App Runner` `ECR` `API Gateway` `Lambda(Node.js・Python)` `DynamoDB` `Step Functions` `CodeCommit` `CodeBuild` `CodeDeploy` `CodePipeline` `SQS` `SNS` `Data Firehose` `EventBridge` `CloudWatch (Alarm・Logs)` `Security Hub` `GuardDuty` `Control Tower` `Organizations` `Identity Center` `Service Catalog` `DevOps Guru` `Bedrock` `Kendra`
 
 ### IaC
 
-Terraform / CloudFormation / SAM / CDK
+`Terraform` `CloudFormation` `SAM` `CDK`
 
 ### OS
 
-Linux / Windows
+`Linux` `Windows`
 
 ### Programming Language
 
-Python / JavaScript / TypeScript
+`Python` `JavaScript` `TypeScript`
 
 ### SaaS
 
-GitHub / GitHub Actions
+`GitHub` `GitHub Actions`
 
 ---
 
@@ -99,7 +99,7 @@ GitHub / GitHub Actions
 
 ## 経歴
 
-### クラスメソッド株式会社（2022/03 - 現在）
+### [クラスメソッド株式会社](https://classmethod.jp/)（2022/03 - 現在）
 
 クラウドエンジニアとして、主に AWS アーキテクチャの設計/構築を担当。  
 PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用いたコード開発も実施。
@@ -129,11 +129,11 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：VPC / ECR / ECS(Fargate) / Lambda(Python) / SQS / SNS / S3 / CloudWatch (Alarm・Logs) / EventBridge /Step Functions
-- IaC： CloudFormation / SAM
-- SaaS： GitHub
+- AWS サービス：`VPC` `ECR` `ECS(Fargate)` `Lambda(Python)` `SQS` `SNS` `S3` `CloudWatch (Alarm・Logs)` `EventBridge` `Step Functions`
+- IaC： `CloudFormation` `SAM`
+- SaaS： `GitHub`
 
-#### AI-Starter内製開発（2024/1 - 現在)
+#### [AI-Starter](https://classmethod.jp/services/generative-ai/ai-starter/)内製開発（2024/1 - 現在)
 
 **概要**
 
@@ -152,12 +152,10 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：WAF / App Runner / DynamoDB / Secrets Manager / Lambda(Node.js) / Bedrock / Kendra / S3
-- IaC： CDK(Typescript)
+- AWS サービス：`WAF` `App Runner` `DynamoDB` `Secrets Manager` `Lambda(Node.js)` `Bedrock` `Kendra` `S3`
+- IaC： `CDK(Typescript)`
 
-**参考ページ**
-
-- [生成AI環境構築サービス「AI-Starter」](https://classmethod.jp/services/generative-ai/ai-starter/)
+-
 
 #### 社内生成AIインフラチーム活動（2024/1 - 2024/8)
 
@@ -178,7 +176,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：Amazon Bedrock / Amazon Kendra / Amazon S3 / AWS App Runner / Amazon DynamoDB / AWS WAF
+- AWS サービス：`Amazon Bedrock` `Amazon Kendra` `Amazon S3` `AWS App Runner` `Amazon DynamoDB` `AWS WAF`
 
 #### RAG システム設計構築 （2023/11 - 2024/3)
 
@@ -201,10 +199,10 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：WAF / App Runner / Bedrock / Kendra / S3
-- IaC： CloudFormation
+- AWS サービス：`WAF` `App Runner` `Bedrock` `Kendra` `S3`
+- IaC： `CloudFormation`
 
-#### マルチアカウント通知集約システム内製開発(2023/8 - 2024/2)
+#### [AWSマルチアカウント管理支援](https://classmethod.jp/aws/services/multi-account/)通知集約システム内製開発(2023/8 - 2024/2)
 
 **概要**
 
@@ -222,12 +220,10 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：Security Hub / GuardDuty / Step Functions / EventBridge
-- IaC： CDK(Typescript)
+- AWS サービス：`Security Hub` `GuardDuty` `Step Functions` `EventBridge`
+- IaC： `CDK(Typescript)`
 
-**参考文献**
-
-- [AWSマルチアカウント管理支援](https://classmethod.jp/aws/services/multi-account/)
+-
 
 #### SaaSログ連携・保管サーバレスシステム設計構築（2023/5 - 2024/6)
 
@@ -255,9 +251,9 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：EventBridge / Lambda(Python) / SQS / SNS / S3 / CloudWatch (Alarm・Logs) / DevOps Guru
-- IaC： CloudFormation / SAM
-- SaaS： GitHub / GitHub Actions
+- AWS サービス：`EventBridge` `Lambda(Python)` `SQS` `SNS` `S3` `CloudWatch (Alarm・Logs)` `DevOps Guru`
+- IaC： `CloudFormation` `SAM`
+- SaaS： `GitHub` `GitHub Actions`
 
 #### 認証システム用コンテナ基盤技術支援（2022/11 - 2023/6)
 
@@ -287,8 +283,8 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス： VPC / ELB(ALB・NLB) / ECS / EFS / RDS(Aurora) / ElastiCache(Redis) / S3 / CloudFront / WAF / ECS(Fargate) / ECR / API Gateway / CodeCommit / CodeBuild / CodeDeploy / CodePipeline / EventBridge
-- IaC： CloudFormation
+- AWS サービス： `VPC` `ELB(ALB・NLB)` `ECS` `EFS` `RDS(Aurora)` `ElastiCache(Redis)` `S3` `CloudFront` `WAF` `ECS(Fargate)` `ECR` `API Gateway` `CodeCommit` `CodeBuild` `CodeDeploy` `CodePipeline` `EventBridge`
+- IaC： `CloudFormation`
 
 #### 基幹システム用マルチアカウント基盤技術支援
 
@@ -313,9 +309,9 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス： Control Tower / Organizations / Identity Center / Service Catalog / WAF / Data Firehose / CloudWatch (Logs)
-- IaC： CloudFormation
-- SaaS： GitHub
+- AWS サービス： `Control Tower` `Organizations` `Identity Center` `Service Catalog` `WAF` `Data Firehose` `CloudWatch (Logs)`
+- IaC： `CloudFormation`
+- SaaS： `GitHub`
 
 #### Webサイト用RDSインスタンスタイプ自動変更システム構築（2022/7 - 2022/8)
 
@@ -340,7 +336,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：EventBridge / Lambda(Python) / SNS
+- AWS サービス：`EventBridge` `Lambda(Python)` `SNS`
 
 #### ECサイト用AWS環境構築（2022/6 - 2022/7)
 
@@ -365,10 +361,10 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 - 動作確認試験
 - 技術質問対応
 
-**環境**
+**使用技術**
 
-- AWS サービス：IAM / CloudFront / S3 / Lambda(Node.js) / Route 53 / ACM
-- IaC： Terraform
+- AWS サービス：`IAM` `CloudFront` `S3` `Lambda(Node.js)` `Route 53` `ACM`
+- IaC： `Terraform`
 
 #### CMSインフラ用AWS環境構築（2022/5 - 2022/8)
 
@@ -391,10 +387,10 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- AWS サービス：IAM / VPC / ELB(ALB) / EC2 / RDS(MySQL) / ElastiCache(Redis) / S3 / Route 53 / ACM
-- IaC： Terraform
+- AWS サービス：`IAM` `VPC` `ELB(ALB)` `EC2` `RDS(MySQL)` `ElastiCache(Redis)` `S3` `Route 53` `ACM`
+- IaC： `Terraform`
 
-### 兼松エレクトロニクス株式会社（2019/04 - 2022/02)
+### [兼松エレクトロニクス株式会社](https://www.kel.co.jp/)（2019/04 - 2022/02)
 
 インフラエンジニアとして、主にオンプレミスにおける Linux サーバの設計/構築を担当。  
 またコンテナ技術（Docker/Kubernetes)の検証も実施。
@@ -420,7 +416,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- ミドルウェア：Oracle19c
+- ミドルウェア：`Oracle19c`
 
 #### 情報システム用vSphere基盤更改（2021/10 - 2021/12)
 
@@ -441,8 +437,8 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- OS：RHEL8
-- ミドルウェア：Apache 2.4
+- OS：`RHEL8`
+- ミドルウェア：`Apache 2.4`
 
 #### 基幹システム用z/VM基盤更改（2021/6 - 2021/12)
 
@@ -463,7 +459,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- OS：SLES12 SP5
+- OS：`SLES12 SP5`
 
 #### 基幹システム用VIOS基盤更改 (2021/1 - 2021/7)
 
@@ -484,7 +480,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- ミドルウェア：WAS9.0.5
+- ミドルウェア：`WAS9.0.5`
 
 #### 社内コンテナ検証チーム活動 (2020/6 - 2022/1)
 
@@ -503,7 +499,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 **使用技術**
 
-- ミドルウェア： Docker / Kubernetes / Openshift
+- ミドルウェア： `Docker` `Kubernetes` `Openshift`
 
 ---
 
@@ -515,14 +511,14 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 |リポジトリ名|言語|概要|
 |---|---|---|
-|[dotfiles](https://github.com/tsukuboshi/dotfiles)|Bash|自身の PC セットアップ用の dotfiles|
-|[sam-notify-aws-billing](https://github.com/tsukuboshi/sam-notify-aws-billing)|SAM/Python|AWS 利用料金を通知するサーバレスシステムコード|
-|[sam-ai-cloud-engineer](https://github.com/tsukuboshi/sam-ai-cloud-engineer)|SAM/Python|Amazon Bedrock を活用し構成図を CloudFormation テンプレートとパラメータシートに変換するサーバレスシステムコード|
-|[gas-count-schedule-time](https://github.com/tsukuboshi/gas-count-schedule-time)|Aside/TypeScript|Googleカレンダーの予定から色ごとに工数をカウントし集計するアプリコード|
-|[sam-bedrock-kendra-rag](https://github.com/tsukuboshi/sam-bedrock-kendra-rag)|SAM/Python|Amazon Kendra と Amazon Bedrock を用いた RAG システムデプロイするためのコード|
-|[sam-bedrock-kb-aurora-rag](https://github.com/tsukuboshi/sam-bedrock-kb-aurora-rag)|SAM/Python|Amazon Aurora と Amazon Bedrock Knowledge Bases を用いた RAG システムデプロイするためのコード|
-|[terraform-microservices-template](https://github.com/tsukuboshi/terraform-microservices-template)|Terraform|AWS を用いたマイクロサービス構成用 Terraform テンプレート|
-|[cdk-microservices-bluegreendeployment-template](https://github.com/tsukuboshi/cdk-microservices-bluegreendeployment-template)|CDK/TypeScript|AWS を用いた マイクロサービス構成用 CDK テンプレート|
+|[dotfiles](https://github.com/tsukuboshi/dotfiles)|`Bash`|自身の PC セットアップ用の dotfiles|
+|[sam-notify-aws-billing](https://github.com/tsukuboshi/sam-notify-aws-billing)|`SAM` `Python`|AWS 利用料金を通知するサーバレスシステムコード|
+|[sam-ai-cloud-engineer](https://github.com/tsukuboshi/sam-ai-cloud-engineer)|`SAM` `Python`|Amazon Bedrock を活用し構成図を CloudFormation テンプレートとパラメータシートに変換するサーバレスシステムコード|
+|[gas-count-schedule-time](https://github.com/tsukuboshi/gas-count-schedule-time)|`Apps Script` `TypeScript`|Googleカレンダーの予定から色ごとに工数をカウントし集計するアプリコード|
+|[sam-bedrock-kendra-rag](https://github.com/tsukuboshi/sam-bedrock-kendra-rag)|`SAM` `Python`|Amazon Kendra と Amazon Bedrock を用いた RAG システムデプロイするためのコード|
+|[sam-bedrock-kb-aurora-rag](https://github.com/tsukuboshi/sam-bedrock-kb-aurora-rag)|`SAM` `Python`|Amazon Aurora と Amazon Bedrock Knowledge Bases を用いた RAG システムデプロイするためのコード|
+|[terraform-microservices-template](https://github.com/tsukuboshi/terraform-microservices-template)|`Terraform`|AWS を用いたマイクロサービス構成用 Terraform テンプレート|
+|[cdk-microservices-bluegreendeployment-template](https://github.com/tsukuboshi/cdk-microservices-bluegreendeployment-template)|`CDK` `TypeScript`|AWS を用いた マイクロサービス構成用 CDK テンプレート|
 
 ### ブログ投稿
 
