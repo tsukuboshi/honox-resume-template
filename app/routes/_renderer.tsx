@@ -13,8 +13,8 @@ export default jsxRenderer(({ children }) => {
   if (isDev) {
     // 開発環境（localhost:5173）
     cssPath = '/app/style.css'
-  } else if (baseUrl === CONFIG.BASE_PATH) {
-    // GitHub Pages本番環境（baseUrlがCONFIG.BASE_PATHと一致する場合）
+  } else if (baseUrl.includes(CONFIG.BASE_PATH)) {
+    // GitHub Pages本番環境（baseUrlにCONFIG.BASE_PATHが含まれる場合）
     cssPath = `${CONFIG.BASE_PATH}static/style.css`
   } else {
     // Viteプレビューサーバー（localhost:4173）環境、その他の環境
