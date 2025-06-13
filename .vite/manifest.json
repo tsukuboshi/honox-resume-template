@@ -1,13 +1,13 @@
 {
-  "_markdown-simple-Cmaso2nB.js": {
-    "file": "static/markdown-simple-Cmaso2nB.js",
+  "_markdown-simple-Dh92syBv.js": {
+    "file": "static/markdown-simple-Dh92syBv.js",
     "name": "markdown-simple",
     "imports": [
       "app/client.ts"
     ]
   },
   "app/client.ts": {
-    "file": "static/client-BNcGXjpE.js",
+    "file": "static/client-CGmGXK1t.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
@@ -19,27 +19,27 @@
     ]
   },
   "app/islands/SectionWithBulkToggle.tsx": {
-    "file": "static/SectionWithBulkToggle-KvVW18kN.js",
+    "file": "static/SectionWithBulkToggle-BJmd3Ghe.js",
     "name": "SectionWithBulkToggle",
     "src": "app/islands/SectionWithBulkToggle.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_markdown-simple-Cmaso2nB.js"
+      "_markdown-simple-Dh92syBv.js"
     ]
   },
   "app/islands/ToggleSection.tsx": {
-    "file": "static/ToggleSection-CLCOm8wN.js",
+    "file": "static/ToggleSection-BYaXoRJS.js",
     "name": "ToggleSection",
     "src": "app/islands/ToggleSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_markdown-simple-Cmaso2nB.js"
+      "_markdown-simple-Dh92syBv.js"
     ]
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-ChsGtcAx.js",
+    "file": "static/runtime-CJB_lj2U.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,
