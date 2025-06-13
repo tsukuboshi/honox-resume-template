@@ -420,14 +420,39 @@ function convertAccountLinksToShieldsBadges(
   return processedContent;
 }
 
+// YouTube埋め込みリンクをiframeに変換する関数
+function convertYouTubeEmbedToIframe(content: string): string {
+  const youtubePattern =
+    /- \[([^\]]+)\]\((https:\/\/www\.youtube\.com\/embed\/[^\)]+)\)/g;
+  const youtubeLinkPattern =
+    /\[([^\]]+)\]\((https:\/\/www\.youtube\.com\/embed\/[^\)]+)\)/g;
+
+  // SpeakerDeckと同じstyle
+  const style =
+    "width: 100%; height: auto; aspect-ratio: 560 / 315; border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px;";
+
+  let processed = content.replace(youtubePattern, (match, title, url) => {
+    return `<iframe style="${style}" src="${url}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+  });
+
+  processed = processed.replace(youtubeLinkPattern, (match, title, url) => {
+    return `<iframe style="${style}" src="${url}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+  });
+
+  return processed;
+}
+
 export function renderMarkdownContent(
   content: string,
   sectionTitle?: string
 ): string {
   if (!content.trim()) return "";
 
+  // 追加: YouTube埋め込み変換
+  let processedContent = convertYouTubeEmbedToIframe(content);
+
   // スライド共有サービスをiframe埋め込みに変換
-  let processedContent = convertSlideToEmbed(content);
+  processedContent = convertSlideToEmbed(processedContent);
 
   // ブログ記事をはてなブログカードに変換
   processedContent = convertBlogURLToHatenaCard(processedContent);
