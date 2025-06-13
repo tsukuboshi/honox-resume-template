@@ -6,7 +6,7 @@
 |---|---|
 |ハンドルネーム|つくぼし|
 |最終学歴|早稲田大学 商学部卒|
-|経験職種|ソリューションアーキテクト/バックエンドエンジニア|
+|経験職種|ソリューションアーキテクト/バックエンドエンジニア/プロジェクトマネージャー|
 
 ### アカウント
 
@@ -46,7 +46,7 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 
 ## 技術スキル
 
-実業務で使用した技術のみ列挙。
+実業務で使用した技術のみ列挙します。
 
 ### AWS
 
@@ -93,14 +93,39 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 
 ## 経歴
 
-### [クラスメソッド株式会社](https://classmethod.jp/)（2022/03 - 現在）
+### [クラスメソッド株式会社](https://classmethod.jp/)（2022/3 - 2025/6）
 
-クラウドエンジニアとして、主に AWS アーキテクチャの設計/構築を担当。  
-PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用いたコード開発も実施。
+クラウドエンジニアとして、主に AWS アーキテクチャの設計/構築を担当しました。  
+PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用いたコード開発も実施しています。  
 
-以下では参画したプロジェクトの内、主要なもののみを記載する。
+以下では参画したプロジェクトの内、主要なもののみを記載します。
 
-#### SaaSログ連携・保管コンテナシステム設計構築 （2024/9 - 現在)
+#### AIチャットボット設計構築 （2024/9 - 2025/3)
+
+**概要**
+
+- 生成 AI を活用したチャットボットアプリを構築。
+
+**担当**
+
+- プリセールス
+- 顧客折衝
+- システム設計
+- システム構築
+- システム運用保守
+
+**業務内容**
+
+- 設計書作成
+- 構築作業
+- 動作確認試験
+
+**使用技術**
+
+- AWS サービス：`WAF` `DynamoDB` `Secrets Manager` `Lambda(Node.js)` `Bedrock` `Kendra` `S3`
+- IaC： `CDK(Typescript)`
+
+#### SaaSログ連携・保管コンテナシステム設計構築 （2024/9 - 2025/3)
 
 **概要**
 
@@ -127,7 +152,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 - IaC： `CloudFormation` `SAM`
 - SaaS： `GitHub`
 
-#### [AI-Starter](https://classmethod.jp/services/generative-ai/ai-starter/)内製開発（2024/1 - 現在)
+#### [AI-Starter](https://classmethod.jp/services/generative-ai/ai-starter/)内製開発（2024/1 - 2025/6)
 
 **概要**
 
@@ -276,11 +301,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 - AWS サービス： `VPC` `ELB(ALB・NLB)` `ECS` `EFS` `RDS(Aurora)` `ElastiCache(Redis)` `S3` `CloudFront` `WAF` `ECS(Fargate)` `ECR` `API Gateway` `CodeCommit` `CodeBuild` `CodeDeploy` `CodePipeline` `EventBridge`
 - IaC： `CloudFormation`
 
-#### 基幹システム用マルチアカウント基盤技術支援
-
-**期間**
-
-- 2022/7 - 2023/3
+#### 基幹システム用マルチアカウント基盤技術支援 (2022/7 - 2023/3)
 
 **概要**
 
@@ -380,12 +401,12 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 - AWS サービス：`IAM` `VPC` `ELB(ALB)` `EC2` `RDS(MySQL)` `ElastiCache(Redis)` `S3` `Route 53` `ACM`
 - IaC： `Terraform`
 
-### [兼松エレクトロニクス株式会社](https://www.kel.co.jp/)（2019/04 - 2022/02)
+### [兼松エレクトロニクス株式会社](https://www.kel.co.jp/)（2019/4 - 2022/2)
 
-インフラエンジニアとして、主にオンプレミスにおける Linux サーバの設計/構築を担当。  
-またコンテナ技術（Docker/Kubernetes)の検証も実施。
+インフラエンジニアとして、主にオンプレミスにおける Linux サーバの設計/構築を担当しました。  
+またコンテナ技術（Docker/Kubernetes)の検証も実施しています。
 
-以下では参画したプロジェクトの内、主要なもののみを記載する。
+以下では参画したプロジェクトの内、主要なもののみを記載します。
 
 #### 基幹システム用vSphere基盤更改（2021/10 - 2022/2)
 
@@ -495,7 +516,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 ### 個人開発
 
-以下では開発した自作リポジトリの内、主要なものを記載する。
+以下では開発した自作リポジトリの内、主要なものを記載します。
 
 |リポジトリ名|言語|概要|
 |---|---|---|
@@ -510,65 +531,117 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 ### ブログ投稿
 
-#### [DevelopersIO](https://dev.classmethod.jp/author/tsukuboshi/)
+以下では投稿したブログの内、主要なものを記載します。  
 
-2025/6までに 100 本以上の記事を作成していました。主要記事は以下の通りです。
+#### DevelopersIO
 
+2022/3から2025/6までに、100本以上の記事を作成していました。代表的な記事は以下の通りです。
+
+- [AWS入門ブログリレー2024〜Amazon Bedrock編〜](https://dev.classmethod.jp/articles/introduction-2024-aws-bedrock/)
 - [CloudFormation一撃で作るAWS料金通知ツール(Email/Slack/LINE対応)](https://dev.classmethod.jp/articles/notify-aws-billing-for-cloudformaiton/)
+- [Knowledge Bases for Amazon Bedrock \(with OpenSearch Serverless\)をSAMで実装してみた](https://dev.classmethod.jp/articles/sam-knowledge-base-for-bedrock-with-oss/)
+- [S3にアップロードしたAWS構成図をCloudFormationに変換するシステムを作ってみた](https://dev.classmethod.jp/articles/bedrock-claude-convert-diagram-to-cfn/)
+- [Kendraのアクセスコントロール設定をEntra IDのOpen ID Connectを用いて有効化してみた](https://dev.classmethod.jp/articles/kendra-sharepoint-entraid-oidc/)
+- [AWSの構成図をChatGPT\(GPT\-4V\)に読み込ませてIaCコードを生成してみた](https://dev.classmethod.jp/articles/chatgpt-convert-aws-diagram-to-iac/)
+- [ECSとCodePipelineのブルー/グリーンデプロイ構成をCDKで実装してみた](https://dev.classmethod.jp/articles/cdk-ecr-ecs-bluegreen-deployment/)
+- [AuroraとRDSの違いを一覧表でまとめてみた](https://dev.classmethod.jp/articles/aurora-or-rds-by-table/)
+- [FireLens\(Fluent Bit\)におけるログルーティングの仕組みについて調査してみた](https://dev.classmethod.jp/articles/ecs_firelens_tag/)
+- [TerraformでCloudFront Functionsを環境ごとに有効化/無効化してみた](https://dev.classmethod.jp/articles/cloudfront-functions-per-env-terraform/)
 
-#### [Qiita](https://qiita.com/kuraboshi)
+#### Zenn
+
+2023/5から現在まで投稿している主要のブログサイトになります。代表的な記事は以下の通りです。
+
+- [Macの環境をdotfilesでセットアップしてみた改](https://zenn.dev/tsukuboshi/articles/6e82aef942d9af)
+- [Google Calenderの予定をTypeScriptを用いて色別で工数集計してみた](https://zenn.dev/tsukuboshi/articles/31c95d863d8896)
+- [GmailをTypeScriptとLINE Messaging APIを用いてLINEに自動転送してみた](https://zenn.dev/tsukuboshi/articles/gas-gmail-to-line)
+- [MCP Serverを呼び出すAIエージェントをMastra、Next.js、AWS CDKで実装してみた](https://zenn.dev/tsukuboshi/articles/nextjs-mastra-mcp-with-aws)
+
+#### Qiita
 
 - [【備忘録】Kubernetesの仕組みを整理する \#kubernetes \- Qiita](https://qiita.com/kuraboshi/items/036ba1b5cf67cb8a6dcd)
 
-#### [Zenn](https://zenn.dev/tsukuboshi)
-
-2025/7現在投稿しているブログサイトになります。主要記事は以下の通りです。
-
-- [Macの環境をdotfilesでセットアップしてみた改](https://zenn.dev/tsukuboshi/articles/6e82aef942d9af)
-
 ### イベント登壇
 
-以下では登壇したイベントの内、主要なものを記載する。
+以下では登壇したイベントの内、主要な資料及び動画を記載します。
 
-#### [Amazon Bedrock GenUハンズオン #1](https://classmethod.connpass.com/event/346442/)
+#### [Amazon Bedrock GenUハンズオン #1](https://classmethod.connpass.com/event/346442/)：生成AI解説資料
+
+**資料**
 
 - [Amazon Bedrock GenUハンズオン座学資料 #1 GenU環境で生成AIを体験してみよう](https://www.docswell.com/slide/ZXE8GN/embed)
 
-#### [Amazon Bedrock GenUハンズオン #2](https://classmethod.connpass.com/event/346443/)
+#### [Amazon Bedrock GenUハンズオン #2](https://classmethod.connpass.com/event/346443/)：RAG解説資料
+
+**資料**
 
 - [Amazon Bedrock GenUハンズオン座学資料 #2 GenU環境でRAGを体験してみよう](https://www.docswell.com/slide/5DNR34/embed)
 
+#### [Classmethod AI Talks(CATs) 〜生成AI 新年LT大会〜](https://cats.doorkeeper.jp/events/180830)：AWSエンジニアに捧ぐLangChainの歩き方
+
+**資料**
+
+- [AWSエンジニアに捧ぐLangChainの歩き方 - Speaker Deck](https://speakerdeck.com/player/8c6afd2c50c34c189d72892eebf4c2ae)
+
+**動画**
+
+- [AWSエンジニアに捧ぐLangChainの歩き方 - YouTube](https://www.youtube.com/embed/AJKS7i67Sxg?si=sFiaMmE_17lAaWO8)
+
 #### [JAWS FESTA 2024 in 広島](https://jawsfesta2024.jaws-ug.jp/)：Amplify Gen 2ではじめる 生成AIアプリ開発入門
+
+**資料**
 
 - [Amplify Gen 2ではじめる 生成AIアプリ開発入門 - Speaker Deck](https://speakerdeck.com/player/98e6569af2b24e4ebff41b46dc4d253a)
 
 #### [Classmethod Odyssey](https://classmethod.connpass.com/event/322685/)：AWSで構築するパターン別RAG構成解説
 
+**資料**
+
 - [AWSで構築するパターン別RAG構成解説 - Speaker Deck](https://speakerdeck.com/player/2707682b444841d19d18771759abc78e)
 
+**動画**
+
+- [AWSで実現するRAG構成！Retrieverの種類と最適なインフラパターン解説 - YouTube](https://www.youtube.com/embed/QPhGs0iwBR8?si=_DFt38cwSZKl0bvf)
+
 #### [Bedrock Claude Night 2](https://jawsug-ai.connpass.com/event/319748/)：AWS構成図からCloudFormationとパラメータシートを自動生成するシステムを作ってみた
+
+**資料**
 
 - [AWS構成図からCloudFormationとパラメータシートを自動生成するシステムを作ってみた](https://speakerdeck.com/player/1464a901f9fb4e2e89fda1fa85ab6471)
 
 #### [JAWS-UG東京 ランチタイムLT会 #11](https://jawsug.connpass.com/event/316451/)：5分で分かる(かもしれない)Vector engine for OpenSearch Serverless
 
+**資料**
+
 - [5分で分かる(かもしれない)Vector engine for OpenSearch Serverless](https://speakerdeck.com/player/aaa0830e33354ea6a63b8322be7e08bf)
 
 #### [JAWS-UG朝会 #55](https://jawsug-asa.connpass.com/event/301827/)：君はApplication Composerというサービスを知っているか
+
+**資料**
 
 - [君はApplication Composerというサービスを知っているか](https://speakerdeck.com/player/209b17ab0ec7448da834f4df887d0652)
 
 #### [JAWS-UG CDK支部 #12](https://jawsug-cdk.connpass.com/event/307989/)：CDKをCloudFormationテンプレートとして利用する際の注意点n選
 
+**資料**
+
 - [CDKをCloudFormationテンプレートとして利用する際の注意点n選](https://speakerdeck.com/player/eb548fa38dd745969c32ccc138cced66)
 
 #### [JAWS-UG朝会 #51](https://jawsug-asa.connpass.com/event/291917/)：インフラエンジニアのためのLambda実践入門
+
+**資料**
 
 - [インフラエンジニアのためのLambda実践入門](https://speakerdeck.com/player/f541cbd494e941558827ec87039ebfe4)
 
 #### [DevelopersIO 2023](https://event.classmethod.jp/developers-io/2023)：AWSとGitHubを用いたパターン別CI/CD構成解説
 
+**資料**
+
 - [AWSとGitHubを用いたパターン別CI/CD構成解説](https://speakerdeck.com/player/13ed26fb607a41d598f64b0b899dd0da)
+
+**動画**
+
+- [AWS基盤でのCI/CD構成を徹底解説！CodeシリーズとGitHubの使い分けも解消 - YouTube](https://www.youtube.com/embed/nJ-eEgfbjG8?si=CiEVatkJa5fNdYqC)
 
 #### [JAWS-UG朝会 #39](https://jawsug-asa.connpass.com/event/255874/)：(今更ながら)AWSのコンテナサービスについてざっくりまとめてみる
 
@@ -576,21 +649,35 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 #### [JAWS-UG CLI専門支部 #273R](https://jawsug-cli.connpass.com/event/253108/)：LambdaとLine Messaging APIで湯婆婆botを作ってみた
 
+**資料**
+
 - [LambdaとLine Messaging APIで湯婆婆botを作ってみた](https://speakerdeck.com/player/9c9d25fecd894b9b845063e50662b5ea)
 
 #### [DevelopersIO 2022](https://dev.classmethod.jp/news/devio-2022/)：AWS初心者に捧ぐコスト可視化のススメ
 
+**資料**
+
 - [AWS初心者に捧ぐコスト可視化のススメ](https://speakerdeck.com/player/6864a287e4074215b7f179716df7a0b4)
 
+**動画**
+
+- [AWS初心者に捧ぐコスト可視化のススメ - YouTube](https://www.youtube.com/embed/KWBxZIyDUJY?si=LkuNB641YEB0DF5M)
+
 #### [AKIBA.AWS ONLINE #08](https://dev.classmethod.jp/news/akiba-aws-220523/)：それ、t2.micro選んで大丈夫？
+
+**資料**
 
 - [それ、t2.micro選んで大丈夫？](https://speakerdeck.com/player/d12345c2b1f94f7fb6626de0d7b81211)
 
 #### [JAWS-UG CLI専門支部 #256M](https://jawsug-cli.connpass.com/event/243629/)：CLI専門支部に参加したらAWSエンジニアに転職できた件について
 
+**資料**
+
 - [CLI専門支部に参加したらAWSエンジニアに転職できた件について](https://speakerdeck.com/player/19623bacacf44d4d8567255085941c1b)
 
 ### その他
+
+以下では特記するべき経歴について記載します。  
 
 #### [Software Design 2024年11月号](https://gihyo.jp/magazine/SD/archive/2024/202411)寄稿
 
@@ -598,4 +685,4 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 
 #### [JAWS-UG 茨城](https://jawsug-ibaraki.connpass.com/)運営
 
-JAWS-UG茨城の初期メンバーとして2024年7月からの立ち上げに貢献し、運営メンバーとして活動中
+JAWS-UG茨城の初期メンバーとして2024/11からの立ち上げに貢献し、運営メンバーとして活動中
