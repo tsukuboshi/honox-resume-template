@@ -8,7 +8,10 @@ import { CONFIG } from "./config";
 const entry = "./app/server.ts";
 
 export default defineConfig(({ mode, command }) => ({
-  base: mode === "production" && command === "build" ? CONFIG.BASE_PATH : "",
+  base:
+    (mode === "production" || mode === "client") && command === "build"
+      ? CONFIG.BASE_PATH
+      : "",
   plugins: [honox(), tailwindcss(), build(), ssg({ entry })],
   server: {
     port: 5173,

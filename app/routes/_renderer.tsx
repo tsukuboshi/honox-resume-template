@@ -4,20 +4,20 @@ import { CONFIG } from '../../config'
 
 export default jsxRenderer(({ children }) => {
   // 環境に応じてCSSファイルのパスを設定
-  const isDev = import.meta.env.DEV
   const baseUrl = import.meta.env.BASE_URL || ''
+  const isDev = import.meta.env.DEV
 
   // CSSファイルのパスを環境に応じて設定
   let cssPath: string
 
   if (isDev) {
-    // 開発環境
+    // 開発環境（localhost:5173）
     cssPath = '/app/style.css'
   } else if (baseUrl === CONFIG.BASE_PATH) {
     // GitHub Pages本番環境（baseUrlがCONFIG.BASE_PATHと一致する場合）
     cssPath = `${CONFIG.BASE_PATH}static/style.css`
   } else {
-    // Viteプレビューサーバーやその他の環境
+    // Viteプレビューサーバー（localhost:4173）環境、その他の環境
     cssPath = '/static/style.css'
   }
 
