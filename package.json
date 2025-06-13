@@ -4,8 +4,9 @@
   "scripts": {
     "dev": "vite",
     "dev:preview": "vite preview",
-    "build": "vite build --mode client && vite build",
+    "build:html": "vite build --mode client && vite build",
     "build:css": "npx @tailwindcss/cli@latest -i ./app/style.css -o ./dist/static/style.css --minify",
+    "build": "npm run build:html && npm run build:css",
     "build:pdf": "md-to-pdf docs/README.md",
     "ssg": "npm run build && npm run build:css && npm run dev:preview",
     "preview": "wrangler dev",
