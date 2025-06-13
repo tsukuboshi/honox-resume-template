@@ -18,6 +18,8 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
+        env:
+          GITHUB_PAGES: true
       - run: npm run build:css
       - uses: peaceiris/actions-gh-pages@v4
         with:

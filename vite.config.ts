@@ -8,10 +8,7 @@ import { CONFIG } from "./config";
 const entry = "./app/server.ts";
 
 export default defineConfig(({ mode, command }) => ({
-  base:
-    (mode === "production" || mode === "client") && command === "build"
-      ? CONFIG.BASE_PATH
-      : "",
+  base: process.env.GITHUB_PAGES ? `/${CONFIG.REPOSITORY_NAME}/` : "",
   plugins: [honox(), tailwindcss(), build(), ssg({ entry })],
   server: {
     port: 5173,

@@ -12,19 +12,4 @@ export const CONFIG = {
    * 例: https://username.github.io/REPOSITORY_NAME/
    */
   REPOSITORY_NAME: "honox-resume",
-
-  /**
-   * GitHub Pagesのベースパス
-   * 先頭と末尾にスラッシュが付いた形式
-   */
-  get BASE_PATH(): string {
-    return `/${this.REPOSITORY_NAME}/`;
-  },
-
-  /**
-   * 現在の環境がGitHub Pagesかどうかを判定
-   */
-  isGitHubPages(env: ImportMeta["env"]): boolean {
-    return env.PROD && env.BASE_URL === this.BASE_PATH;
-  },
 };
