@@ -5,11 +5,21 @@ import { CONFIG } from '../../config'
 export default jsxRenderer(({ children }) => {
   // 環境に応じてCSSファイルのパスを設定
   const isDev = import.meta.env.DEV
-  // 本番ビルド時は常にGitHub Pages形式のパスを使用
-  const isProduction = import.meta.env.PROD
+  const baseUrl = import.meta.env.BASE_URL || ''
 
   // CSSファイルのパスを環境に応じて設定
-  const cssPath = isDev ? '/app/style.css' : isProduction ? `${CONFIG.BASE_PATH}static/style.css` : '/static/style.css'
+  let cssPath: string
+
+  if (isDev) {
+    // 開発環境
+    cssPath = '/app/style.css'
+  } else if (baseUrl === CONFIG.BASE_PATH) {
+    // GitHub Pages本番環境（baseUrlがCONFIG.BASE_PATHと一致する場合）
+    cssPath = `${CONFIG.BASE_PATH}static/style.css`
+  } else {
+    // Viteプレビューサーバーやその他の環境
+    cssPath = '/static/style.css'
+  }
 
   return (
     <html lang="en">
