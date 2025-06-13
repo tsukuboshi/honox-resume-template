@@ -9,7 +9,16 @@ const entry = "./app/server.ts";
 
 export default defineConfig(({ mode, command }) => ({
   base: process.env.GITHUB_PAGES ? `/${CONFIG.REPOSITORY_NAME}/` : "",
-  plugins: [honox(), tailwindcss(), build(), ssg({ entry })],
+  plugins: [
+    honox({
+      client: {
+        input: ["/app/style.css"],
+      },
+    }),
+    tailwindcss(),
+    build(),
+    ssg({ entry }),
+  ],
   server: {
     port: 5173,
     strictPort: true,
