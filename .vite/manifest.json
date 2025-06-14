@@ -1,6 +1,6 @@
 {
-  "_honox-island-ndzdfPgb.js": {
-    "file": "static/honox-island-ndzdfPgb.js",
+  "_honox-island-BLl4muxF.js": {
+    "file": "static/honox-island-BLl4muxF.js",
     "name": "honox-island",
     "imports": [
       "app/client.ts"
@@ -11,7 +11,7 @@
     "name": "index"
   },
   "app/client.ts": {
-    "file": "static/client-Bv3IYhBb.js",
+    "file": "static/client--Y5aKr2j.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
@@ -24,34 +24,34 @@
     ]
   },
   "app/islands/DownloadButtons.tsx": {
-    "file": "static/DownloadButtons-C0-7HoIj.js",
+    "file": "static/DownloadButtons-C0xPncad.js",
     "name": "DownloadButtons",
     "src": "app/islands/DownloadButtons.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-ndzdfPgb.js"
+      "_honox-island-BLl4muxF.js"
     ]
   },
   "app/islands/SectionWithBulkToggle.tsx": {
-    "file": "static/SectionWithBulkToggle-DCUyoiJx.js",
+    "file": "static/SectionWithBulkToggle-DEw3mA1b.js",
     "name": "SectionWithBulkToggle",
     "src": "app/islands/SectionWithBulkToggle.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-ndzdfPgb.js",
+      "_honox-island-BLl4muxF.js",
       "_index-Bf94iodv.js"
     ]
   },
   "app/islands/ToggleSection.tsx": {
-    "file": "static/ToggleSection-DXPralKE.js",
+    "file": "static/ToggleSection-DmWoUMQv.js",
     "name": "ToggleSection",
     "src": "app/islands/ToggleSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-ndzdfPgb.js",
+      "_honox-island-BLl4muxF.js",
       "_index-Bf94iodv.js"
     ]
   },
@@ -61,7 +61,7 @@
     "isEntry": true
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-D-PQmY_4.js",
+    "file": "static/runtime-CZ2emp4D.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,
