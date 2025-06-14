@@ -14,9 +14,9 @@ export default function ToggleSection({ title, content, level, defaultOpen = fal
   const headingClass = level === 4
     ? 'text-lg font-semibold text-gray-800'
     : level === 3
-    ? 'text-xl font-semibold text-gray-800'
+    ? 'text-xl font-semibold text-blue-900'
     : level === 2
-    ? 'text-2xl font-bold text-gray-900'
+    ? 'text-2xl font-bold text-gray-800'
     : 'text-3xl font-bold text-gray-900';
 
   if (level !== 4) {
