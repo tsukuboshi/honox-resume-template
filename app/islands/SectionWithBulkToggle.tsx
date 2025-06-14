@@ -44,7 +44,7 @@ export default function SectionWithBulkToggle({ section, subsections }: SectionW
     setAllOpen(openCount === subsections.length && subsections.length > 0);
   }, [toggleStates, subsections.length]);
 
-  const headingClass = 'text-xl font-semibold text-gray-800';
+  const headingClass = 'text-xl font-semibold text-blue-900';
 
   return (
     <div className="mb-8">
