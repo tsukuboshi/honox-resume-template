@@ -1,13 +1,13 @@
 {
-  "_markdown-simple-Dh92syBv.js": {
-    "file": "static/markdown-simple-Dh92syBv.js",
-    "name": "markdown-simple",
+  "_index-Ca4iZQvp.js": {
+    "file": "static/index-Ca4iZQvp.js",
+    "name": "index",
     "imports": [
       "app/client.ts"
     ]
   },
   "app/client.ts": {
-    "file": "static/client-CGmGXK1t.js",
+    "file": "static/client-BeRGLNS0.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
@@ -19,23 +19,23 @@
     ]
   },
   "app/islands/SectionWithBulkToggle.tsx": {
-    "file": "static/SectionWithBulkToggle-BJmd3Ghe.js",
+    "file": "static/SectionWithBulkToggle-Djl3hETI.js",
     "name": "SectionWithBulkToggle",
     "src": "app/islands/SectionWithBulkToggle.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_markdown-simple-Dh92syBv.js"
+      "_index-Ca4iZQvp.js"
     ]
   },
   "app/islands/ToggleSection.tsx": {
-    "file": "static/ToggleSection-BYaXoRJS.js",
+    "file": "static/ToggleSection-M4lGJAWw.js",
     "name": "ToggleSection",
     "src": "app/islands/ToggleSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_markdown-simple-Dh92syBv.js"
+      "_index-Ca4iZQvp.js"
     ]
   },
   "app/style.css": {
@@ -44,7 +44,7 @@
     "isEntry": true
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-CJB_lj2U.js",
+    "file": "static/runtime-B6IetgzB.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,
