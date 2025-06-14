@@ -1,8 +1,9 @@
 import { parseMarkdownSimple, renderMarkdownContent } from '../lib/markdown';
 import ToggleSection from '../islands/ToggleSection';
 import SectionWithBulkToggle from '../islands/SectionWithBulkToggle';
+import DownloadButtons from '../islands/DownloadButtons';
 // Viteの?rawクエリを使ってビルド時にファイルを読み込む
-import markdownContent from '../../docs/README.md?raw';
+import markdownContent from '../../public/README.md?raw';
 
 export default function Home() {
   const sections = parseMarkdownSimple(markdownContent);
@@ -62,6 +63,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto py-8 px-4">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">職務経歴書</h1>
+          <DownloadButtons />
         </header>
 
         <main className="bg-white rounded-lg shadow-lg p-8">
