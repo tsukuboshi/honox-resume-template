@@ -1,6 +1,6 @@
 {
-  "_honox-island-BLl4muxF.js": {
-    "file": "static/honox-island-BLl4muxF.js",
+  "_honox-island-BE3jdHUx.js": {
+    "file": "static/honox-island-BE3jdHUx.js",
     "name": "honox-island",
     "imports": [
       "app/client.ts"
@@ -11,7 +11,7 @@
     "name": "index"
   },
   "app/client.ts": {
-    "file": "static/client--Y5aKr2j.js",
+    "file": "static/client-CZNoke7N.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
@@ -24,44 +24,44 @@
     ]
   },
   "app/islands/DownloadButtons.tsx": {
-    "file": "static/DownloadButtons-C0xPncad.js",
+    "file": "static/DownloadButtons-BuLLvThv.js",
     "name": "DownloadButtons",
     "src": "app/islands/DownloadButtons.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-BLl4muxF.js"
+      "_honox-island-BE3jdHUx.js"
     ]
   },
   "app/islands/SectionWithBulkToggle.tsx": {
-    "file": "static/SectionWithBulkToggle-DEw3mA1b.js",
+    "file": "static/SectionWithBulkToggle-DKq5t1nU.js",
     "name": "SectionWithBulkToggle",
     "src": "app/islands/SectionWithBulkToggle.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-BLl4muxF.js",
+      "_honox-island-BE3jdHUx.js",
       "_index-Bf94iodv.js"
     ]
   },
   "app/islands/ToggleSection.tsx": {
-    "file": "static/ToggleSection-DmWoUMQv.js",
+    "file": "static/ToggleSection-C6ASQh9e.js",
     "name": "ToggleSection",
     "src": "app/islands/ToggleSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-BLl4muxF.js",
+      "_honox-island-BE3jdHUx.js",
       "_index-Bf94iodv.js"
     ]
   },
   "app/style.css": {
-    "file": "static/style-CenHVMQq.css",
+    "file": "static/style-D6sa8I5x.css",
     "src": "app/style.css",
     "isEntry": true
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-CZ2emp4D.js",
+    "file": "static/runtime-Cgy58fMn.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,

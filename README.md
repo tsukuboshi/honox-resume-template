@@ -93,10 +93,10 @@ AWS アーキテクチャを構築するにあたり、CloudFormation、Terrafor
 
 ## 経歴
 
-### [クラスメソッド株式会社](https://classmethod.jp/)（2022/3 - 2025/6）
+### クラスメソッド株式会社（2022/3 - 2025/6）
 
-クラウドエンジニアとして、主に AWS アーキテクチャの設計/構築を担当しました。  
-PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用いたコード開発も実施しています。  
+主にソリューションアーキテクトとして、AWS アーキテクチャの/設計/構築を担当しました。  
+またPJに応じて、バックエンドエンジニア兼任でサーバレスアプリケーションの開発や、プロジェクトマネージャー兼任でチームマネジメント及び顧客折衝も行っています。  
 
 以下では参画したプロジェクトの内、主要なもののみを記載します。
 
@@ -401,7 +401,7 @@ PJ に応じて、IaC(CloudFormation/Terraform/CDK)や Serverless(Lambda)を用�
 - AWS サービス：`IAM` `VPC` `ELB(ALB)` `EC2` `RDS(MySQL)` `ElastiCache(Redis)` `S3` `Route 53` `ACM`
 - IaC： `Terraform`
 
-### [兼松エレクトロニクス株式会社](https://www.kel.co.jp/)（2019/4 - 2022/2)
+### 兼松エレクトロニクス株式会社（2019/4 - 2022/2)
 
 インフラエンジニアとして、主にオンプレミスにおける Linux サーバの設計/構築を担当しました。  
 またコンテナ技術（Docker/Kubernetes)の検証も実施しています。
