@@ -3,13 +3,22 @@ import ssg from "@hono/vite-ssg";
 import tailwindcss from "@tailwindcss/vite";
 import honox from "honox/vite";
 import { defineConfig } from "vite";
-import { CONFIG } from "./config";
 
 const entry = "./app/server.ts";
+const repositoryName = "honox-resume";
 
 export default defineConfig(({ mode, command }) => ({
-  base: process.env.GITHUB_PAGES ? `/${CONFIG.REPOSITORY_NAME}/` : "",
-  plugins: [honox(), tailwindcss(), build(), ssg({ entry })],
+  base: process.env.GITHUB_PAGES ? `/${repositoryName}/` : "",
+  plugins: [
+    honox({
+      client: {
+        input: ["/app/style.css"],
+      },
+    }),
+    tailwindcss(),
+    build(),
+    ssg({ entry }),
+  ],
   server: {
     port: 5173,
     strictPort: true,
