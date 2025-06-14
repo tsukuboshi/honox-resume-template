@@ -1,4 +1,4 @@
-import { parseMarkdownSimple, renderMarkdownContent } from '../lib/markdown-simple';
+import { parseMarkdownSimple, renderMarkdownContent } from '../lib/markdown';
 import ToggleSection from '../islands/ToggleSection';
 import SectionWithBulkToggle from '../islands/SectionWithBulkToggle';
 // Viteの?rawクエリを使ってビルド時にファイルを読み込む

@@ -1,5 +1,5 @@
 import { useState } from 'hono/jsx';
-import { renderMarkdownContent } from '../lib/markdown-simple';
+import { renderMarkdownContent } from '../lib/markdown';
 
 interface ToggleSectionProps {
   title: string;
