@@ -4,10 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 import honox from "honox/vite";
 import { defineConfig } from "vite";
 
-const repositoryName = "honox-resume";
-const basePath = process.env.GITHUB_PAGES ? `/${repositoryName}/` : "";
+const repositoryName = process.env.REPOSITORY_NAME;
+const basePath = repositoryName ? `/${repositoryName}/` : "";
 
-export default defineConfig(({ mode, command }) => ({
+export default defineConfig(() => ({
   base: basePath,
   define: {
     __BASE_PATH__: JSON.stringify(basePath),
