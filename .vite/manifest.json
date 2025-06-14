@@ -1,6 +1,6 @@
 {
-  "_honox-island-BE3jdHUx.js": {
-    "file": "static/honox-island-BE3jdHUx.js",
+  "_honox-island-BKbhYAef.js": {
+    "file": "static/honox-island-BKbhYAef.js",
     "name": "honox-island",
     "imports": [
       "app/client.ts"
@@ -11,47 +11,47 @@
     "name": "index"
   },
   "app/client.ts": {
-    "file": "static/client-CZNoke7N.js",
+    "file": "static/client-BU4IYr1C.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
     "dynamicImports": [
-      "app/islands/DownloadButtons.tsx",
-      "app/islands/SectionWithBulkToggle.tsx",
-      "app/islands/ToggleSection.tsx",
+      "app/islands/CollapsibleSection.tsx",
+      "app/islands/DownloadSection.tsx",
+      "app/islands/SectionGroup.tsx",
       "node_modules/honox/dist/client/runtime.js",
       "node_modules/honox/dist/client/runtime.js"
     ]
   },
-  "app/islands/DownloadButtons.tsx": {
-    "file": "static/DownloadButtons-BuLLvThv.js",
-    "name": "DownloadButtons",
-    "src": "app/islands/DownloadButtons.tsx",
+  "app/islands/CollapsibleSection.tsx": {
+    "file": "static/CollapsibleSection-ZDc81JxL.js",
+    "name": "CollapsibleSection",
+    "src": "app/islands/CollapsibleSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-BE3jdHUx.js"
-    ]
-  },
-  "app/islands/SectionWithBulkToggle.tsx": {
-    "file": "static/SectionWithBulkToggle-DKq5t1nU.js",
-    "name": "SectionWithBulkToggle",
-    "src": "app/islands/SectionWithBulkToggle.tsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "app/client.ts",
-      "_honox-island-BE3jdHUx.js",
+      "_honox-island-BKbhYAef.js",
       "_index-Bf94iodv.js"
     ]
   },
-  "app/islands/ToggleSection.tsx": {
-    "file": "static/ToggleSection-C6ASQh9e.js",
-    "name": "ToggleSection",
-    "src": "app/islands/ToggleSection.tsx",
+  "app/islands/DownloadSection.tsx": {
+    "file": "static/DownloadSection-3JBLTIaz.js",
+    "name": "DownloadSection",
+    "src": "app/islands/DownloadSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-BE3jdHUx.js",
+      "_honox-island-BKbhYAef.js"
+    ]
+  },
+  "app/islands/SectionGroup.tsx": {
+    "file": "static/SectionGroup-DJ_AzORX.js",
+    "name": "SectionGroup",
+    "src": "app/islands/SectionGroup.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "app/client.ts",
+      "_honox-island-BKbhYAef.js",
       "_index-Bf94iodv.js"
     ]
   },
@@ -61,7 +61,7 @@
     "isEntry": true
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-Cgy58fMn.js",
+    "file": "static/runtime-CvjYPRW9.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,
