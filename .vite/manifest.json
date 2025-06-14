@@ -38,6 +38,11 @@
       "_markdown-simple-Dh92syBv.js"
     ]
   },
+  "app/style.css": {
+    "file": "static/style-D61bCfX-.css",
+    "src": "app/style.css",
+    "isEntry": true
+  },
   "node_modules/honox/dist/client/runtime.js": {
     "file": "static/runtime-CJB_lj2U.js",
     "name": "runtime",
