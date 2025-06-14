@@ -5,7 +5,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build --mode client && vite build",
-    "build:pdf": "md-to-pdf public/README.md"
+    "build:pdf": "md-to-pdf public/README.md --launch-options '{ \"args\": [\"--no-sandbox\"] }'"
   },
   "private": true,
   "dependencies": {

@@ -20,8 +20,6 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm ci
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1
       - name: Build PDF
         run: npm run build:pdf
       - name: Build
