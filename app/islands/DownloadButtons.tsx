@@ -8,9 +8,8 @@ export default function DownloadButtons() {
 
     try {
       const fileName = fileType === 'markdown' ? 'README.md' : 'README.pdf';
-      // Viteのbaseパスを使用してURLを構築
-      const basePath = import.meta.env.BASE_URL || '/';
-      const url = `${basePath}${fileName}`;
+      // ベースパスを動的に取得
+      const url = `${__BASE_PATH__}${fileName}`;
 
       // ファイルをダウンロード
       const link = document.createElement('a');

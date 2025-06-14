@@ -4,11 +4,14 @@ import tailwindcss from "@tailwindcss/vite";
 import honox from "honox/vite";
 import { defineConfig } from "vite";
 
-const entry = "./app/server.ts";
 const repositoryName = "honox-resume";
+const basePath = process.env.GITHUB_PAGES ? `/${repositoryName}/` : "";
 
 export default defineConfig(({ mode, command }) => ({
-  base: process.env.GITHUB_PAGES ? `/${repositoryName}/` : "",
+  base: basePath,
+  define: {
+    __BASE_PATH__: JSON.stringify(basePath),
+  },
   plugins: [
     honox({
       client: {
@@ -17,7 +20,9 @@ export default defineConfig(({ mode, command }) => ({
     }),
     tailwindcss(),
     build(),
-    ssg({ entry }),
+    ssg({
+      entry: "./app/server.ts",
+    }),
   ],
   server: {
     port: 5173,
