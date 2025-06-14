@@ -1,8 +1,13 @@
-import type {} from 'hono'
+import type {} from "hono";
 
-declare module 'hono' {
+declare module "hono" {
   interface Env {
-    Variables: {}
-    Bindings: {}
+    Variables: {};
+    Bindings: {};
   }
+}
+
+// Viteのdefineで定義されるグローバル変数の型定義
+declare global {
+  const __BASE_PATH__: string;
 }
