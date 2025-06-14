@@ -8,33 +8,19 @@ export default function DownloadButtons() {
 
     try {
       const fileName = fileType === 'markdown' ? 'README.md' : 'README.pdf';
-      const url = `/${fileName}`;
+      // Viteのbaseパスを使用してURLを構築
+      const basePath = import.meta.env.BASE_URL || '/';
+      const url = `${basePath}${fileName}`;
 
-      // ファイルをfetchで取得
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      // Blobとして取得
-      const blob = await response.blob();
-
-      // ダウンロード用のURLを作成
-      const downloadUrl = window.URL.createObjectURL(blob);
-
-      // ダウンロードリンクを作成してクリック
+      // ファイルをダウンロード
       const link = document.createElement('a');
-      link.href = downloadUrl;
+      link.href = url;
       link.download = fileName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-
-      // URLオブジェクトを解放
-      window.URL.revokeObjectURL(downloadUrl);
     } catch (error) {
       console.error('Download failed:', error);
-      alert('ファイルのダウンロードに失敗しました。しばらく時間をおいてから再度お試しください。');
     } finally {
       setIsDownloading(null);
     }
