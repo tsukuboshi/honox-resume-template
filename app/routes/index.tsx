@@ -1,25 +1,32 @@
-import { parseMarkdownSimple, renderMarkdownContent } from '../lib/markdown';
-import ToggleSection from '../islands/ToggleSection';
-import SectionWithBulkToggle from '../islands/SectionWithBulkToggle';
-import DownloadButtons from '../islands/DownloadButtons';
+import { parseMarkdownSimple, renderMarkdownContent, SectionItem } from '../lib/markdown';
+import CollapsibleSection from '../islands/CollapsibleSection';
+import SectionGroup from '../islands/SectionGroup';
+import DownloadSection from '../islands/DownloadSection';
 // Viteの?rawクエリを使ってビルド時にファイルを読み込む
 import markdownContent from '../../public/README.md?raw';
+
+// グループ化されたセクションの型定義
+interface GroupedSection {
+  type: 'intro' | 'h3-group' | 'regular';
+  section: SectionItem;
+  subsections?: SectionItem[];
+}
 
 export default function Home() {
   const sections = parseMarkdownSimple(markdownContent);
 
   // セクションをレベルごとにグループ化する関数
-  const groupSections = (sections: any[]) => {
-    const grouped: any[] = [];
-    let currentH3: any = null;
-    let currentH3Subsections: any[] = [];
+  const groupSections = (sections: SectionItem[]): GroupedSection[] => {
+    const grouped: GroupedSection[] = [];
+    let currentH3: SectionItem | null = null;
+    let currentH3Subsections: SectionItem[] = [];
 
     sections.forEach((section) => {
       if (!section.title && section.level === 0) {
         // イントロセクション
         grouped.push({ type: 'intro', section });
       } else if (section.level === 1 || section.level === 2) {
-        // H1, H2は通常のToggleSectionとして処理
+        // H1, H2は通常のCollapsibleSectionとして処理
         if (currentH3) {
           grouped.push({ type: 'h3-group', section: currentH3, subsections: currentH3Subsections });
           currentH3 = null;
@@ -63,7 +70,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto py-8 px-4">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">職務経歴書</h1>
-          <DownloadButtons />
+          <DownloadSection />
         </header>
 
         <main className="bg-white rounded-lg shadow-lg p-8">
@@ -82,17 +89,17 @@ export default function Home() {
             } else if (group.type === 'h3-group') {
               // H3セクションとその配下のH4項目
               return (
-                <SectionWithBulkToggle
+                <SectionGroup
                   key={group.section.id}
                   section={group.section}
-                  subsections={group.subsections}
+                  subsections={group.subsections || []}
                 />
               );
             } else {
               // 通常のセクション（H1, H2など）
               const processedContent = renderMarkdownContent(group.section.content);
               return (
-                <ToggleSection
+                <CollapsibleSection
                   key={group.section.id}
                   title={group.section.title}
                   content={processedContent}
