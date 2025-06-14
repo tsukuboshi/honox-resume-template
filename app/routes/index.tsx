@@ -112,7 +112,7 @@ export default function Home() {
         </main>
 
         <footer className="text-center mt-12 text-gray-500">
-          <p>Built with HonoX on Cloudflare Workers</p>
+          <p>Built with HonoX on GitHub Pages</p>
         </footer>
       </div>
     </div>
