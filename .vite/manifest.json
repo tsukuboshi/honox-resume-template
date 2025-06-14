@@ -1,50 +1,67 @@
 {
-  "_index-Ca4iZQvp.js": {
-    "file": "static/index-Ca4iZQvp.js",
-    "name": "index",
+  "_honox-island-nQihQER5.js": {
+    "file": "static/honox-island-nQihQER5.js",
+    "name": "honox-island",
     "imports": [
       "app/client.ts"
     ]
   },
+  "_index-Bf94iodv.js": {
+    "file": "static/index-Bf94iodv.js",
+    "name": "index"
+  },
   "app/client.ts": {
-    "file": "static/client-BeRGLNS0.js",
+    "file": "static/client-Cp7i5qbC.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
     "dynamicImports": [
+      "app/islands/DownloadButtons.tsx",
       "app/islands/SectionWithBulkToggle.tsx",
       "app/islands/ToggleSection.tsx",
       "node_modules/honox/dist/client/runtime.js",
       "node_modules/honox/dist/client/runtime.js"
     ]
   },
+  "app/islands/DownloadButtons.tsx": {
+    "file": "static/DownloadButtons-CQRmDF1y.js",
+    "name": "DownloadButtons",
+    "src": "app/islands/DownloadButtons.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "app/client.ts",
+      "_honox-island-nQihQER5.js"
+    ]
+  },
   "app/islands/SectionWithBulkToggle.tsx": {
-    "file": "static/SectionWithBulkToggle-Djl3hETI.js",
+    "file": "static/SectionWithBulkToggle-5Ek0tqNc.js",
     "name": "SectionWithBulkToggle",
     "src": "app/islands/SectionWithBulkToggle.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_index-Ca4iZQvp.js"
+      "_honox-island-nQihQER5.js",
+      "_index-Bf94iodv.js"
     ]
   },
   "app/islands/ToggleSection.tsx": {
-    "file": "static/ToggleSection-M4lGJAWw.js",
+    "file": "static/ToggleSection-BT9VFQ1F.js",
     "name": "ToggleSection",
     "src": "app/islands/ToggleSection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_index-Ca4iZQvp.js"
+      "_honox-island-nQihQER5.js",
+      "_index-Bf94iodv.js"
     ]
   },
   "app/style.css": {
-    "file": "static/style-D61bCfX-.css",
+    "file": "static/style-CenHVMQq.css",
     "src": "app/style.css",
     "isEntry": true
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-B6IetgzB.js",
+    "file": "static/runtime-DbaiRJMF.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,
