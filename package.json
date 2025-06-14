@@ -5,8 +5,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build --mode client && vite build",
-    "build:pdf": "md-to-pdf docs/README.md",
-    "ssg": "npm run build && npm run preview"
+    "build:pdf": "md-to-pdf public/README.md"
   },
   "private": true,
   "dependencies": {
