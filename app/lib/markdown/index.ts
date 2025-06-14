@@ -45,8 +45,9 @@ export function renderMarkdownContent(
     sectionTitle
   );
 
-  // 基本的なMarkdown記法を変換
-  processedContent = convertBasicMarkdown(processedContent);
+  // 先にブロック要素（コードブロック、テーブル等）を処理
+  processedContent = convertTableToHtml(processedContent);
 
-  return convertTableToHtml(processedContent);
+  // その後にインライン要素（太字、イタリック等）を処理
+  return convertBasicMarkdown(processedContent);
 }

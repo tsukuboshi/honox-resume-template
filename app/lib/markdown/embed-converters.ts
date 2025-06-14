@@ -54,7 +54,7 @@ export function convertBlogURLToHatenaCard(content: string): string {
     /- \[([^\]]+)\]\((https:\/\/(?:dev\.classmethod\.jp\/articles\/[^)]+|qiita\.com\/[^\/]+\/items\/[^)]+|zenn\.dev\/[^\/]+\/articles\/[^)]+))\)/g;
 
   return content.replace(blogPattern, (match, title, url) => {
-    return `<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:680px;" title="${title}" src="https://hatenablog-parts.com/embed?url=${encodeURIComponent(
+    return `<iframe class="hatenablogcard" style="width:100%;height:155px;" title="${title}" src="https://hatenablog-parts.com/embed?url=${encodeURIComponent(
       url
     )}" width="300" height="150" frameborder="0" scrolling="no"></iframe>`;
   });
