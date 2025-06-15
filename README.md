@@ -1,4 +1,5 @@
-※本ページは[tsukuboshi/honox-resume-template](https://github.com/tsukuboshi/honox-resume-template)を用いてデプロイした職務経歴書テンプレートのサンプルになります。ご自身の経歴に合わせて、public/README.mdを編集しコミットする事で内容を更新してください。なお「アカウント」及び「業務外活動」にはURL例を載せているため、実際に使用する際はご自身のアカウントのリンク先に置き換えてください。  
+**注意事項(使用前に必ずお読みください)**
+> 本ページは[tsukuboshi/honox-resume-template](https://github.com/tsukuboshi/honox-resume-template)を用いてデプロイした職務経歴書テンプレートのサンプルになります。該当テンプレートリポジトリから"Use this template"で新規リポジトリを作成したのち、ご自身の経歴に合わせて"public/README.md"を編集しコミットする事で内容を更新してください。なお「アカウント」及び「業務外活動」にはURL例を載せているため、実際に使用する際はご自身のアカウントのリンク先に置き換えてください。  
 
 ## 基本情報
 
