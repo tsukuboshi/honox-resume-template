@@ -1,5 +1,5 @@
 **注意事項(使用前に必ずお読みください)**
-> 本ページは[tsukuboshi/honox-resume-template](https://github.com/tsukuboshi/honox-resume-template)を用いてデプロイした職務経歴書テンプレートのサンプルになります。該当テンプレートリポジトリから"Use this template"で新規リポジトリを作成したのち、ご自身の経歴に合わせて"public/README.md"を編集しコミットする事で内容を更新してください。なお「アカウント」及び「業務外活動」にはURL例を載せているため、実際に使用する際はご自身のアカウントのリンク先に置き換えてください。  
+> 本ページは[tsukuboshi/honox-resume-template](https://github.com/tsukuboshi/honox-resume-template)というテンプレートリポジトリを用いてデプロイした職務経歴書テンプレートのサンプルになります。該当リポジトリから"Use this template"で新規のリポジトリを作成したのち、ご自身の経歴に合わせて"public/README.md"を編集しコミットする事で内容を更新してください。なお「アカウント」及び「業務外活動」にはリポジトリ作成者であるつくぼしのリンク先URLを例として載せているため、実際に使用する際はご自身のアカウントのリンク先に置き換えてください。  
 
 ## 基本情報
 
@@ -13,7 +13,6 @@
 
 ### アカウント
 
-- [DevelopersIO](https://dev.classmethod.jp/author/tsukuboshi)
 - [Zenn](https://zenn.dev/tsukuboshi)
 - [Qiita](https://qiita.com/kuraboshi)
 - [Github](https://github.com/tsukuboshi)
@@ -48,7 +47,7 @@
 
 ## 経歴
 
-### [会社名]（YYYY/MM - YYYY/MM）
+### [会社名①]（YYYY/MM - YYYY/MM）
 
 ```txt
 [業務内容のサマリーを記述してください]
@@ -79,7 +78,7 @@
 - [使用技術カテゴリ1]：`[技術名1]` `[技術名2]`
 - [使用技術カテゴリ2]： `[技術名1]`
 
-### [会社名]（YYYY/MM - YYYY/MM)
+### [会社名②]（YYYY/MM - YYYY/MM)
 
 ```txt
 [業務内容のサマリーを記述してください]
