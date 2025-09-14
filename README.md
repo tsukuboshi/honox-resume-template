@@ -1,67 +1,152 @@
-# HonoX Resume Template
+**注意事項(使用前に必ずお読みください)**
+> 本ページは[tsukuboshi/honox-resume-template](https://github.com/tsukuboshi/honox-resume-template)というテンプレートリポジトリを用いてデプロイした職務経歴書テンプレートのサンプルになります。該当リポジトリから"Use this template"で新規のリポジトリを作成したのち、ご自身の経歴に合わせて"public/README.md"を編集しコミットする事で内容を更新してください。なお「アカウント」及び「業務外活動」にはリポジトリ作成者であるつくぼしのリンク先URLを例として載せているため、実際に使用する際はご自身のアカウントのリンク先に置き換えてください。  
 
-HonoXを使用した職務経歴書Webアプリケーションのテンプレートです。
+## 基本情報
 
-## 特徴
+### プロフィール
 
-- **HonoX**: Honoベースのフルスタックフレームワークを使用
-- **静的サイト生成**: 高速/軽量/モダンなUIを持つWebサイトを自動生成
-- **Markdown管理**: 職務経歴書をMarkdownで内容管理
-- **PDF出力対応**: 職務経歴書をMarkdwon/PDFとしてダウンロード可能
-- **インタラクティブ**: セクション表示/非表示の切り替え機能
+|項目|値|
+|---|---|
+|ハンドルネーム|[あなたのハンドルネーム]|
+|最終学歴|[あなたの最終学歴]|
+|経験職種|[あなたの経験職種]|
 
-## 技術スタック
+### アカウント
 
-- **フレームワーク**: HonoX
-- **ビルドツール**: Vite
-- **スタイリング**: TailwindCSS
-- **PDF生成**: md-to-pdf
-- **デプロイ**: GitHub Pages
+- [Zenn](https://zenn.dev/tsukuboshi)
+- [Qiita](https://qiita.com/kuraboshi)
+- [Github](https://github.com/tsukuboshi)
+- [SpeakerDeck](https://speakerdeck.com/tsukuboshi)
+- [Docswell](https://www.docswell.com/user/tsukuboshi)
+- [X](https://x.com/tsukuboshi0755)
 
-## セットアップ
+## 業務スキル
 
-```bash
-# パッケージのインストール
-npm install
+### [業務スタック①]
 
-# HTML/CSS/JS生成
-npm run build
-
-# PDF生成
-npm run build:pdf
-
-# プレビューサーバーの起動
-npm run preview
+```txt
+[あなたのスキル概要を文章形式で記述してください]
 ```
 
-## 使い方
+## 技術スキル
 
-1. `public/README.md`に職務経歴書の内容を記載
-2. 開発サーバーを起動してプレビュー確認
-3. ビルドして静的サイトを生成
-4. 必要に応じてPDFを生成
+実業務で使用した技術のみ列挙します。
 
-## デプロイ
+### [技術スタック①]
 
-mainブランチで`public/README.md`をコミットすると、GitHub Actionsの`.github/workflows/deploy.yml`が発火し、自動的にGitHub Pagesにデプロイされます。
+`[使用したことのある技術スタックを列挙してください]`
 
-## ディレクトリ構造
+## 保有称号
 
-```text
-├── app/                    # アプリケーションコード
-│   ├── components/         # UIコンポーネント
-│   ├── hooks/              # カスタムフック
-│   ├── islands/            # インタラクティブコンポーネント
-│   ├── lib/                # ユーティリティ
-│   └── routes/             # ページルーティング
-├── public/                 # 静的ファイル
-│   └── README.md           # 職務経歴書コンテンツ
-└── dist/                   # ビルド出力
+### 資格
+
+|資格名|取得日|
+|---|---|
+|[資格名①]|[取得日]|
+|[資格名②]|[取得日]|
+
+## 経歴
+
+### [会社名①]（YYYY/MM - YYYY/MM）
+
+```txt
+[業務内容のサマリーを記述してください]
 ```
 
-## カスタマイズ
+以下では参画したプロジェクトの内、主要なもののみを記載します。
 
-- `public/README.md`: 職務経歴書の内容
-- `app/style.css`: スタイル調整
-- `app/components/`: UIコンポーネントの修正
-- `vite.config.ts`: ビルド設定
+#### [プロジェクト名] （YYYY/MM - YYYY/MM)
+
+**概要**
+
+[プロジェクト概要を記述してください]
+
+**担当**
+
+1. [担当フェーズ1]
+2. [担当フェーズ2]
+3. [担当フェーズ3]
+
+**業務内容**
+
+1. [業務内容1]
+2. [業務内容2]
+3. [業務内容3]
+
+**使用技術**
+
+- [使用技術カテゴリ1]：`[技術名1]` `[技術名2]`
+- [使用技術カテゴリ2]： `[技術名1]`
+
+### [会社名②]（YYYY/MM - YYYY/MM)
+
+```txt
+[業務内容のサマリーを記述してください]
+```
+
+以下では参画したプロジェクトの内、主要なもののみを記載します。
+
+#### [プロジェクト名] (YYYY/MM - YYYY/MM)
+
+**概要**
+
+[プロジェクト概要を記述してください]
+
+**担当**
+
+1. [担当フェーズ1]
+2. [担当フェーズ2]
+
+**業務内容**
+
+1. [業務内容1]
+2. [業務内容2]
+
+**使用技術**
+
+- [使用技術カテゴリ]： `[技術名1]` `[技術名2]` `[技術名3]`
+
+## 業務外活動
+
+### 個人開発
+
+以下では開発した自作リポジトリの内、主要なものを記載します。
+
+|リポジトリ名|言語|概要|
+|---|---|---|
+|[dotfiles](https://github.com/tsukuboshi/dotfiles)|`Bash`|自身の PC セットアップ用の dotfiles|
+|[sam-notify-aws-billing](https://github.com/tsukuboshi/sam-notify-aws-billing)|`SAM` `Python`|AWS 利用料金を通知するサーバレスシステムコード|
+
+### ブログ投稿
+
+以下では投稿したブログの内、主要なものを記載します。  
+
+#### Zenn埋め込みの例
+
+- [Macの環境をdotfilesでセットアップしてみた改](https://zenn.dev/tsukuboshi/articles/6e82aef942d9af)
+
+#### Qiita埋め込みの例
+
+- [【備忘録】Kubernetesの仕組みを整理する](https://qiita.com/kuraboshi/items/036ba1b5cf67cb8a6dcd)
+
+### イベント登壇
+
+以下では登壇したイベントの内、主要な資料及び動画を記載します。
+
+#### Docswell埋め込みの例
+
+**資料**
+
+- [Amazon Bedrock GenUハンズオン座学資料 #1 GenU環境で生成AIを体験してみよう - Docswell](https://www.docswell.com/slide/ZXE8GN/embed)
+
+#### SpeakerDeck埋め込みの例
+
+**資料**
+
+- [AWSとGitHubを用いたパターン別CI/CD構成解説 - Speaker Deck](https://speakerdeck.com/player/13ed26fb607a41d598f64b0b899dd0da)
+
+#### Youtube埋め込みの例
+
+**動画**
+
+- [AWS基盤でのCI/CD構成を徹底解説！CodeシリーズとGitHubの使い分けも解消 - YouTube](https://www.youtube.com/embed/nJ-eEgfbjG8?si=CiEVatkJa5fNdYqC)
