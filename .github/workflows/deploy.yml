@@ -14,22 +14,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node.js
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
       - name: Install Japanese fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y fonts-noto-cjk
       - name: Build PDF
-        run: npm run build:pdf:compact
+        run: pnpm run build:pdf:compact
       - name: Build
         run: |
           echo "Repository name: $REPOSITORY_NAME"
-          npm run build
+          pnpm run build
         env:
           REPOSITORY_NAME: "${{ github.event.repository.name }}"
       - name: Deploy
