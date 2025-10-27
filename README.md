@@ -34,27 +34,27 @@ HonoXを使用した職務経歴書Webアプリケーションのテンプレー
 1. 事前に以下コマンドでパッケージをインストール
 
 ```bash
-pnpm install
+npm install
 ```
 
 2. 以下コマンドでWebサイトをプレビュー表示可能
 
 ```bash
 # HTML/CSS/JS生成
-pnpm run build
+npm run build
 
 # プレビューサーバーの起動
-pnpm run preview
+npm run preview
 ```
 
 3. 以下コマンドでPDFファイルを生成可能
 
 ```bash
 # PDF生成
-pnpm run build:pdf
+npm run build:pdf
 
 # 圧縮版PDF生成
-pnpm run build:pdf:compact
+npm run build:pdf:compact
 ```
 
 ## テンプレートリポジトリ追従手順
