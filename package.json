@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "@hono/vite-ssg": "^0.1.2",
-    "hono": "^4.7.11",
+    "hono": "^4.12.0",
     "honox": "^0.1.40",
     "md-to-pdf": "^5.2.4"
   },
