@@ -12,7 +12,8 @@
 			"!**/dist",
 			"!**/.hono",
 			"!**/.wrangler",
-			"!**/node_modules"
+			"!**/node_modules",
+			"!app/style.css"
 		]
 	},
 	"formatter": {
