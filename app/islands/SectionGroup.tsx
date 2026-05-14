@@ -33,6 +33,7 @@ const SubsectionItem = ({
 }: SubsectionItemProps) => (
 	<div className="mb-4 border border-gray-200 rounded-lg">
 		<button
+			type="button"
 			onClick={onToggle}
 			className="flex items-center gap-3 w-full text-left p-4 hover:bg-gray-50 transition-colors rounded-lg"
 		>

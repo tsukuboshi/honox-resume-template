@@ -1,5 +1,6 @@
 export const LoadingSpinner = () => (
 	<svg className="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+		<title>Loading</title>
 		<circle
 			className="opacity-25"
 			cx="12"
@@ -18,12 +19,14 @@ export const LoadingSpinner = () => (
 
 export const MarkdownIcon = () => (
 	<svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+		<title>Markdown</title>
 		<path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
 	</svg>
 );
 
 export const PdfIcon = () => (
 	<svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+		<title>PDF</title>
 		<path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
 	</svg>
 );

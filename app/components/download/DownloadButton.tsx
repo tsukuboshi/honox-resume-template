@@ -19,6 +19,7 @@ export const DownloadButton = ({
 
 	return (
 		<button
+			type="button"
 			onClick={onClick}
 			disabled={isLoading}
 			className={`${baseClasses} ${colorClasses}`}

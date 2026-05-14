@@ -8,6 +8,7 @@ export const ToggleButton = ({
 	onClick,
 }: ToggleButtonProps) => (
 	<button
+		type="button"
 		onClick={onClick}
 		className="flex items-center gap-3 w-full text-left p-4 hover:bg-gray-50 transition-colors rounded-lg"
 	>

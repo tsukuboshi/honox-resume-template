@@ -32,13 +32,14 @@ export function isAccountProfileUrl(url: string): boolean {
 
 export function hasAccountProfileUrls(content: string): boolean {
 	const urlPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
-	let match;
+	let match: RegExpExecArray | null = urlPattern.exec(content);
 
-	while ((match = urlPattern.exec(content)) !== null) {
+	while (match !== null) {
 		const url = match[2];
 		if (isAccountProfileUrl(url)) {
 			return true;
 		}
+		match = urlPattern.exec(content);
 	}
 
 	return false;
